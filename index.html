@@ -252,7 +252,7 @@
 
                             </a>
                             <br>
-<i style="font-style:normal; font-size:8pt; text-align:left; color:grey">Studenteninitiative fÃ¼r Karriere und der Kontaktplatform der Hochschule. Teamleitung der Teams Marketing und Magazin. Planung, Ausarbeitung, Design und Druck eines Studentenmagazins. Planung von Firmenkontaktmessen auf dem Campus.</i>
+<i style="font-style:normal; font-size:8pt; text-align:left; color:grey">Studenteninitiative für Karriere und der Kontaktplatform der Hochschule. Teamleitung der Teams Marketing und Magazin. Planung, Ausarbeitung, Design und Druck eines Studentenmagazins. Planung von Firmenkontaktmessen auf dem Campus.</i>
 
                             <!--<div
                             class="divider" style="margin: 7px 0 7px 0;"></div>
@@ -588,7 +588,7 @@
                         </div>
                     </div>
                 </div>
-                <!--START Google PLus-->
+                <!--START Google Plus-->
                 <div class="col s12 m6 socialcard">
                     <div class="card white">
                         <a href="http://google.com/+MaxvonBeust" target="_blank" rel="me">
@@ -710,7 +710,7 @@
                                             <label for="textarea1">Your Message</label>
                                         </div>
                                     </div>
-                                    <button class="btn waves-effect waves-light disabled" type="submit" name="action" style="background-color:#1976D2; margin-top: 12px; margin-left: 3px;">Send <i class="material-icons right">send</i>
+                                    <button class="btn waves-effect waves-light" type="submit" name="action" style="background-color:#1976D2; margin-top: 12px; margin-left: 3px;">Send <i class="material-icons right">send</i>
 
                                     </button>
                                 </form>
@@ -746,7 +746,7 @@
         </script>
         <script src="js/masonry.pkgd.min.js"></script>
         <script>
-            //navblock hÃ¶he anpassen
+            //navblock höhe anpassen
             (function( $ ) {
               $.fn.keepRatio = function(which) {
                   var $this = $(this);
@@ -785,7 +785,7 @@
                 $('#navblockxin').keepRatio('width');
                 $('#navblockmes').keepRatio('width');
             });
-            //navblock hÃ¶he anpassen 50%
+            //navblock höhe anpassen 50%
             (function( $ ) {
               $.fn.keepRatio50 = function(which) {
                   var $this = $(this);
@@ -817,7 +817,7 @@
             $(document).ready(function(){
                 $('#navblock50').keepRatio50('width');
             });
-            //navblock hÃ¶he anpassen 50%
+            //navblock höhe anpassen 50%
             (function( $ ) {
               $.fn.twitterposition = function(which) {
                   var $this = $(this);
@@ -870,6 +870,75 @@
                     itemSelector: '.socialcard',
                 });
             });
+            
+            
+            jQuery( document ).ready(function( $ ) {
+                
+                // variable to hold request
+                var request;
+                // bind to the submit event of our form
+                $("#foo").submit(function(event){
+            
+                    // abort any pending request
+                    if (request) {
+                        request.abort();
+                    }
+                    // setup some local variables
+                    var $form = $(this);
+                    $('#result').attr("class", "btn grey white-text inactive");
+                    $('#result').text('Sending...');
+                    
+                    
+                    // let's select and cache all the fields
+                    var $inputs = $form.find("button, input, select, button, textarea");
+                    // serialize the data in the form
+                    var serializedData = $form.serialize();
+                
+                    // let's disable the inputs for the duration of the ajax request
+                    // Note: we disable elements AFTER the form data has been serialized.
+                    // Disabled form elements will not be serialized.
+                    $inputs.prop("disabled", true);
+                
+                    // fire off the request to /form.php
+                    request = $.ajax({
+                        url: "https://script.google.com/macros/s/AKfycbwRHMBiMH5aCHZPA-ueIJBaGZCyXj1V_7fzys6Fmd_kyTR9KGAL/exec",
+                        type: "post",
+                        data: serializedData
+                    });
+            
+                
+                    // callback handler that will be called on success
+                    request.done(function (response, textStatus, jqXHR){
+                        // log a message to the console
+                        $('#result').text('Sent');
+                        $('#result').parent(this).hide();
+                        toast('Message sent', 9000);
+                        console.log("Message has been sent");
+                    });
+                
+                    // callback handler that will be called on failure
+                    request.fail(function (jqXHR, textStatus, errorThrown){
+                        // log the error to the console
+                        console.error(
+                            "The following error occured: "+
+                            textStatus, errorThrown
+                        );
+                    });
+                
+                    // callback handler that will be called regardless
+                    // if the request failed or succeeded
+                    request.always(function () {
+                        // reenable the inputs
+                        $('#result').text('Sent');
+                        $_POST = array();
+                    });
+                
+                    // prevent default posting of form
+                    event.preventDefault();
+                });
+            });
+            
+            
         </script>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <script>
