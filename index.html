@@ -912,7 +912,7 @@
                     request.done(function (response, textStatus, jqXHR){
                         // log a message to the console
                         $('#result').text('Sent');
-                        $('#result').parent(this).hide();
+                        $('#result').hide();
                         toast('Message sent', 9000);
                         console.log("Message has been sent");
                     });
