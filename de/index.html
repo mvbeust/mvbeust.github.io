@@ -1,98 +1,129 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <meta charset="utf-8">
-        <title>Max von Beust</title>
-        <!--External Information-->
-        <meta name="description" content="Max von Beust, BSc Business Administration (Major: International Marketing), student at RWTH Aachen for Masters Degree of Business Administration (Innovation, Marketing, Entrepreneurship). Perviously student at Pforzheim University and University of Ljubljana. This is the personal website for Maximilian Freiherr von Beust. Here you can find an overview over my online profiles, my work and life.">
-        <meta name="description" content="Max von Beust, BSc Betriebswirtschaftslehre (Schwerpunkt Internationales Marketing), studiert aktuell an der RWTH Aachen einen Master BWL (Innovation, Marketing, Entrepreneurship). Er war vorher Student an der Hochschule Pforzheim und der Universität Ljubljana. Dies ist die persönliche Webseite von Maximilian Freiherr von Beust. Hier finden Sie eine Übersicht über meine online Profile, meine Arbeitserfahrung und mein Leben.">
-        <!--Languages-->
-        <link rel=“alternate” hreflang=“en” href=“http://www.maxvonbeust.com” />
-        <link rel=“alternate” hreflang=“de” href=“http://www.maxvonbeust.com/de” />
-        <!--Stylesheets-->
-        <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-        <!--Icons and Logos-->
-        <link rel="icon" href="https://dl.dropboxusercontent.com/s/tlborrycpx3wugf/favicon.png">
-        <!--Mobile Optimazations-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta name="theme-color" content="#1976D2">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="MvB">
-        <meta name="msapplication-TileImage" content="https://dl.dropboxusercontent.com/s/a8nsbmcz9l5kcqr/logo.png">
-        <meta name="msapplication-TileColor" content="#3f51b5">
-        <meta name="msapplication-navbutton-color" content="#3f51b5">
-        <link rel="manifest" href="/manifest.json">
-    </head>
-    <body>
-        <header>
-            <div class="navbar-fixed hide-on-med-and-up">
-                <nav class="max-blue">
-                    <!--Desktop Navigation-->
-                    <div class="hide-on-med-and-down">
-                        <div class="nav-wrapper container">
-                            <a id="logo-container" class="brand-logo center" style="font-weight:300">Maximilian von Beust</a>
-                        </div>
-                    </div>
-                    <!--Mobile Navigation-->
-                    <div class="hide-on-large-only">
-                        <div class="nav-wrapper">
-                            <a id="logo-container" class="brand-logo center" style="font-weight:300">Max v<i class="hide-on-med-and-up" style="font-style:normal">.</i><i class="hide-on-small-and-down" style="font-style:normal">on</i> Beust</a>
-                        </div>
-                    </div>
-                </nav>
+
+<head>
+  <meta charset="utf-8">
+  <!--Script for switching to other language-->
+  <script>
+    //Enter ISO 639-2 letter Language codes to detect (see: http://www.w3.org/WAI/ER/IG/ert/iso639.htm):
+    var langcodes = new Array("en", "de", "default")
+
+    //Enter corresponding redirect URLs (last one is for default URL):
+    var langredirects = new Array("/", "/de", "/")
+
+    var languageinfo = navigator.language ? navigator.language : navigator.userLanguage
+    var gotodefault = 1
+
+    function redirectpage(dest) {
+      if (window.location.replace)
+        window.location.replace(dest)
+      else
+        window.location = dest
+    }
+
+    for (i = 0; i < langcodes.length - 1; i++) {
+      if (languageinfo.substr(0, 2) == langcodes[i]) {
+        redirectpage(langredirects[i])
+        gotodefault = 0
+        break
+      }
+    }
+
+    if (gotodefault)
+      redirectpage(langredirects[langcodes.length - 1])
+  </script>
+  <title>Max von Beust</title>
+  <!--External Information-->
+  <meta name="description" content="Max von Beust, BSc Business Administration (Major: International Marketing), student at RWTH Aachen for Masters Degree of Business Administration (Innovation, Marketing, Entrepreneurship). Perviously student at Pforzheim University and University of Ljubljana. This is the personal website for Maximilian Freiherr von Beust. Here you can find an overview over my online profiles, my work and life.">
+  <meta name="description" content="Max von Beust, BSc Betriebswirtschaftslehre (Schwerpunkt Internationales Marketing), studiert aktuell an der RWTH Aachen einen Master BWL (Innovation, Marketing, Entrepreneurship). Er war vorher Student an der Hochschule Pforzheim und der Universität Ljubljana. Dies ist die persönliche Webseite von Maximilian Freiherr von Beust. Hier finden Sie eine Übersicht über meine online Profile, meine Arbeitserfahrung und mein Leben.">
+  <!--Languages-->
+  <link rel=“alternate” hreflang=“en” href=“http://www.maxvonbeust.com” />
+  <link rel=“alternate” hreflang=“de” href=“http://www.maxvonbeust.com/de” />
+  <!--Stylesheets-->
+  <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+  <!--Icons and Logos-->
+  <link rel="icon" href="https://dl.dropboxusercontent.com/s/tlborrycpx3wugf/favicon.png">
+  <!--Mobile Optimazations-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#1976D2">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="MvB">
+  <meta name="msapplication-TileImage" content="https://dl.dropboxusercontent.com/s/a8nsbmcz9l5kcqr/logo.png">
+  <meta name="msapplication-TileColor" content="#3f51b5">
+  <meta name="msapplication-navbutton-color" content="#3f51b5">
+  <link rel="manifest" href="/manifest.json">
+</head>
+
+<body>
+  <header>
+    <div class="navbar-fixed hide-on-med-and-up">
+      <nav class="max-blue">
+        <!--Desktop Navigation-->
+        <div class="hide-on-med-and-down">
+          <div class="nav-wrapper container">
+            <a id="logo-container" class="brand-logo center" style="font-weight:300">Maximilian von Beust</a>
+          </div>
+        </div>
+        <!--Mobile Navigation-->
+        <div class="hide-on-large-only">
+          <div class="nav-wrapper">
+            <a id="logo-container" class="brand-logo center" style="font-weight:300">Max v<i class="hide-on-med-and-up" style="font-style:normal">.</i><i class="hide-on-small-and-down" style="font-style:normal">on</i> Beust</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="parallax-container hide-on-small-and-down">
+      <div class="parallax">
+        <img src="https://dl.dropboxusercontent.com/s/4l6y52iu8fmzidb/parallax_airplane.jpg">
+      </div>
+    </div>
+    <!--START Profile Card-->
+    <div class="section">
+      <div class="row container">
+        <div class="col s12 m12">
+          <div class="card white">
+            <div class="col l2 m2 s4 hide-on-med-and-up white-text">.</div>
+            <div class="col l2 m2 s4 hide-on-med-and-up">
+              <img src="https://dl.dropboxusercontent.com/s/j98dlaqavg6b97q/Logo_new.png" class="circle responsive-img" alt="Max von Beust Profile Logo" style=" display:inline-block; overflow:hidden; padding: 20px 0 20px 0">
+              <br>
             </div>
-        </header>
-        <main>
-            <div class="parallax-container hide-on-small-and-down">
-                <div class="parallax">
-                    <img src="https://dl.dropboxusercontent.com/s/4l6y52iu8fmzidb/parallax_airplane.jpg">
-                </div>
+            <div class="col l2 m2 s3 hide-on-small-and-down">
+              <img src="https://dl.dropboxusercontent.com/s/j98dlaqavg6b97q/Logo_new.png" class="circle responsive-img" alt="Max von Beust Profile Logo" style=" display:inline-block; overflow:hidden; padding: 20px 0 20px 0">
             </div>
-            <!--START Profile Card-->
-            <div class="section">
-                <div class="row container">
-                    <div class="col s12 m12">
-                        <div class="card white">
-                            <div class="col l2 m2 s4 hide-on-med-and-up white-text">.</div>
-                            <div class="col l2 m2 s4 hide-on-med-and-up">
-                                <img src="https://dl.dropboxusercontent.com/s/j98dlaqavg6b97q/Logo_new.png" class="circle responsive-img" alt="Max von Beust Profile Logo" style=" display:inline-block; overflow:hidden; padding: 20px 0 20px 0">
-                                <br>
-                            </div>
-                            <div class="col l2 m2 s3 hide-on-small-and-down">
-                                <img src="https://dl.dropboxusercontent.com/s/j98dlaqavg6b97q/Logo_new.png" class="circle responsive-img" alt="Max von Beust Profile Logo" style=" display:inline-block; overflow:hidden; padding: 20px 0 20px 0">
-                            </div>
-                            <div class="hide-on-med-and-up col s12" style="padding: 20px 0 20px 10px"> <i style="font-style:normal; font-size:15pt; text-align:left">Maximilian Freiherr von Beust</i>
+            <div class="hide-on-med-and-up col s12" style="padding: 20px 0 20px 10px"> <i style="font-style:normal; font-size:15pt; text-align:left">Maximilian Freiherr von Beust</i>
 
-                                <br> <i style="font-style:normal; font-size:9pt; text-align:left; color:grey">B.Sc. BWL (Int. Marketing)</i>
+              <br> <i style="font-style:normal; font-size:9pt; text-align:left; color:grey">B.Sc. BWL (Int. Marketing)</i>
 
-                                <div class="divider" style="margin-top:6px;margin-bottom:15px; margin-right:20px"></div> <i style="font-style:normal; font-size:9pt; text-align:left">Studium: RWTH Aachen - M.Sc. BWL</i>
+              <div class="divider" style="margin-top:6px;margin-bottom:15px; margin-right:20px"></div> <i style="font-style:normal; font-size:9pt; text-align:left">Studium: RWTH Aachen - M.Sc. BWL</i>
 
-                                <br> <i style="font-style:normal; font-size:9pt; text-align:left">Zuletzt: Lufthansa AG - Kundenbindung & Strategie</i>
+              <br> <i style="font-style:normal; font-size:9pt; text-align:left">Zuletzt: Lufthansa AG - Kundenbindung & Strategie</i>
 
-                                <div class="divider" style="margin-top:15px;margin-bottom:5px; margin-right:20px" id="menumobile"></div> <i style="font-size:9pt; text-align:left; color:grey">don't minimize risk, maximize opportunity</i>
+              <div class="divider" style="margin-top:15px;margin-bottom:5px; margin-right:20px" id="menumobile"></div> <i style="font-size:9pt; text-align:left; color:grey">don't minimize risk, maximize opportunity</i>
 
-                            </div>
-                            <div class="col l10 m10 s9 hide-on-small-and-down" style="padding: 20px 0 20px 10px"> <i style="font-style:normal; font-size:20pt; text-align:left">Maximilian Freiherr von Beust</i>
-
-                                <br> <i style="font-style:normal; font-size:10pt; text-align:left; color:grey">B.Sc. Betriebswirtschaftslehre (Internationales Marketing)</i>
-
-                                <div class="divider" style="margin-top:6px;margin-bottom:15px; margin-right:20px"></div> <i style="font-style:normal; font-size:10pt; text-align:left">Studium: RWTH Aachen - M.Sc. Betriebswirtschaftslehre</i>
-
-                                <br> <i style="font-style:normal; font-size:10pt; text-align:left">Letzte Arbeitserfahrung: Lufthansa AG - Kundenbindung und Strategie</i>
-
-                                <div class="divider" style="margin-top:15px;margin-bottom:5px; margin-right:20px"></div> <i style="font-size:10pt; text-align:left; color:grey">don't minimize risk, maximize opportunity</i>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <!--END Profile Card-->
-            <!--Under Construction-->
-            <!--<div class="container row" style="padding-top: 1.5rem">
+            <div class="col l10 m10 s9 hide-on-small-and-down" style="padding: 20px 0 20px 10px"> <i style="font-style:normal; font-size:20pt; text-align:left">Maximilian Freiherr von Beust</i>
+
+              <br> <i style="font-style:normal; font-size:10pt; text-align:left; color:grey">B.Sc. Betriebswirtschaftslehre (Internationales Marketing)</i>
+
+              <div class="divider" style="margin-top:6px;margin-bottom:15px; margin-right:20px"></div> <i style="font-style:normal; font-size:10pt; text-align:left">Studium: RWTH Aachen - M.Sc. Betriebswirtschaftslehre</i>
+
+              <br> <i style="font-style:normal; font-size:10pt; text-align:left">Letzte Arbeitserfahrung: Lufthansa AG - Kundenbindung und Strategie</i>
+
+              <div class="divider" style="margin-top:15px;margin-bottom:5px; margin-right:20px"></div> <i style="font-size:10pt; text-align:left; color:grey">don't minimize risk, maximize opportunity</i>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--END Profile Card-->
+    <!--Under Construction-->
+    <!--<div class="container row" style="padding-top: 1.5rem">
                 <div class="col s12 m12">
                     <div class="card" style="background-color: #fff;">
                         <div class="card-content" style="padding:10px 20px 10px 20px"> <span class="badge"><i class="material-icons" style="color: #E53935; line-height: inherit; font-size:1.8rem">announcement</i></span>
@@ -102,392 +133,425 @@
                     </div>
                 </div>
             </div>-->
-            <!--END Construction-->
-            <!--START Menu-->
-            <div class="container row" id="menu">
-                <a href="#education" alt="Education">
-                    <div class="col s2 m2 l1" id="navblockedu">
-                        <div class="card hoverable" style="background-color:#fbcb43; height:inherit">
-                            <div class="navitems"> <i class="material-icons" style="color: #FFF; font-size:100%">school</i>
+    <!--END Construction-->
+    <!--START Menu-->
+    <div class="container row" id="menu">
+      <a href="#education" alt="Education">
+        <div class="col s2 m2 l1" id="navblockedu">
+          <div class="card hoverable" style="background-color:#fbcb43; height:inherit">
+            <div class="navitems"> <i class="material-icons" style="color: #FFF; font-size:100%">school</i>
 
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="#business" alt="Professional Experience">
-                    <div class="col s2 m2 l1" id="navblockbus">
-                        <div class="card hoverable" style="background-color:#43A047; height:inherit">
-                            <div class="navitems"> <i class="material-icons" style="color: #FFF; font-size:100%">business</i>
-
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="#additional" alt="Additional Information">
-                    <div class="col s2 m2 l1" id="navblockadd">
-                        <div class="card hoverable" style="background-color:#E53935; height:inherit">
-                            <div class="navitems"> <i class="material-icons" style="color: #FFF; font-size:100%">flare</i>
-
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="#socialmedia" alt="Social Media">
-                    <div class="col s2 m2 l1" id="navblocksoc">
-                        <div class="card hoverable" style="background-color:#1976D2; height:inherit">
-                            <div class="navitems"> <i class="material-icons" style="color: #FFF; font-size:100%">people</i>
-
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="http://google.com/+MaxvonBeust" alt="Google +" target="_blank" rel="me">
-                    <div class="col s2 m2 l1" id="navblockplu">
-                        <div class="card hoverable" style="background-color:#DD5044; height:inherit">
-                            <div class="navitems">
-                                <img src="https://dl.dropboxusercontent.com/s/8awf9dx3r50wytt/gplus.png" class="responsive-img">
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="http://twitter.com/mvbeust" alt="Twitter" target="_blank" class="hide-on-med-and-down" rel="me">
-                    <div class="col s2 m2 l1" id="navblocktwi">
-                        <div class="card hoverable" style="background-color:#00ACED; height:inherit">
-                            <div class="navitems">
-                                <img src="https://dl.dropboxusercontent.com/s/u9kgip0njk1u2ki/twitter.png" class="responsive-img">
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://de.linkedin.com/in/maxvonbeust" alt="LinkedIn" target="_blank" rel="me">
-                    <div class="col s2 m2 l1" id="navblocklkd">
-                        <div class="card hoverable" style="background-color:#0077B5; height:inherit">
-                            <div class="navitems">
-                                <img src="https://dl.dropboxusercontent.com/s/fybzd5sbqh34ntu/linkedin.png" class="responsive-img">
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://www.xing.com/profile/Maximilian_FreiherrvonBeust" alt="Xing" target="_blank" class="hide-on-med-and-down" rel="me">
-                    <div class="col s2 m2 l1" id="navblockxin">
-                        <div class="card hoverable" style="background-color:#00605E; height:inherit">
-                            <div class="navitems">
-                                <img src="https://dl.dropboxusercontent.com/s/2h9ebzhuxhhm6k2/xing.png" class="responsive-img">
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="#contact" alt="Write to me" class="hide-on-med-and-down">
-                    <div class="col s2 m2 l1" id="navblockmes">
-                        <div class="card hoverable" style="background-color:#FFF; height:inherit">
-                            <div class="navitems"> <i class="material-icons" style="color: #1976D2; font-size:100%">create</i>
-
-                            </div>
-                        </div>
-                    </div>
-                </a>
             </div>
-            <a href="#contact" alt="Write to me" class="hide-on-large-only">
-                <div class="container row" style="padding-top: 1.5rem">
-                    <div class="col s12 m12">
-                        <div class="card" style="background-color: #fff;">
-                            <div class="card-content" style="padding:10px 20px 10px 20px"> <span class="badge"><i class="material-icons" style="color: #1976D2; line-height: inherit; font-size:1.8rem">create</i></span>
- <i style="font-style:normal; font-size:18pt; text-align:left; color:#1976D2;">Nachricht schreiben</i>
+          </div>
+        </div>
+      </a>
+      <a href="#business" alt="Professional Experience">
+        <div class="col s2 m2 l1" id="navblockbus">
+          <div class="card hoverable" style="background-color:#43A047; height:inherit">
+            <div class="navitems"> <i class="material-icons" style="color: #FFF; font-size:100%">business</i>
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <!--END Menu-->
-            <!--START Education-->
-            <div class="container row" id="education" style="padding-top: 1rem">
-                <div class="col s12 m12">
-                    <div class="card" style="background-color: #fbcb43;">
-                        <div class="card-content"> <span class="badge"><i class="material-icons small" style="color: #FFF; line-height: inherit">school</i></span>
- <i style="font-style:normal; font-size:20pt; text-align:left; color:#FFF;">Ausbildung</i>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#additional" alt="Additional Information">
+        <div class="col s2 m2 l1" id="navblockadd">
+          <div class="card hoverable" style="background-color:#E53935; height:inherit">
+            <div class="navitems"> <i class="material-icons" style="color: #FFF; font-size:100%">flare</i>
 
-                        </div>
-                    </div>
-                </div>
-                <!--START Aachen-->
-                <div class="col s12 m12">
-                    <div class="card white">
-                        <div class="card-content"> <span class="badge"><img src="https://dl.dropboxusercontent.com/s/19oec8wiqsm61bv/RWTH.png" alt="RWTH Aachen" style="height:20px"></span>
- <i style="font-style:normal; font-size:16pt; text-align:left">RWTH Aachen</i>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#socialmedia" alt="Social Media">
+        <div class="col s2 m2 l1" id="navblocksoc">
+          <div class="card hoverable" style="background-color:#1976D2; height:inherit">
+            <div class="navitems"> <i class="material-icons" style="color: #FFF; font-size:100%">people</i>
 
-                            <br> <i style="font-style:normal; font-size:10pt; text-align:left; color:grey">Master of Science<br>Betriebswirtschaftslehre - Innovation, Entrepreneurship & Marketing</i>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="http://google.com/+MaxvonBeust" alt="Google +" target="_blank" rel="me">
+        <div class="col s2 m2 l1" id="navblockplu">
+          <div class="card hoverable" style="background-color:#DD5044; height:inherit">
+            <div class="navitems">
+              <img src="https://dl.dropboxusercontent.com/s/8awf9dx3r50wytt/gplus.png" class="responsive-img">
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="http://twitter.com/mvbeust" alt="Twitter" target="_blank" class="hide-on-med-and-down" rel="me">
+        <div class="col s2 m2 l1" id="navblocktwi">
+          <div class="card hoverable" style="background-color:#00ACED; height:inherit">
+            <div class="navitems">
+              <img src="https://dl.dropboxusercontent.com/s/u9kgip0njk1u2ki/twitter.png" class="responsive-img">
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="https://de.linkedin.com/in/maxvonbeust" alt="LinkedIn" target="_blank" rel="me">
+        <div class="col s2 m2 l1" id="navblocklkd">
+          <div class="card hoverable" style="background-color:#0077B5; height:inherit">
+            <div class="navitems">
+              <img src="https://dl.dropboxusercontent.com/s/fybzd5sbqh34ntu/linkedin.png" class="responsive-img">
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="https://www.xing.com/profile/Maximilian_FreiherrvonBeust" alt="Xing" target="_blank" class="hide-on-med-and-down" rel="me">
+        <div class="col s2 m2 l1" id="navblockxin">
+          <div class="card hoverable" style="background-color:#00605E; height:inherit">
+            <div class="navitems">
+              <img src="https://dl.dropboxusercontent.com/s/2h9ebzhuxhhm6k2/xing.png" class="responsive-img">
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#contact" alt="Write to me" class="hide-on-med-and-down">
+        <div class="col s2 m2 l1" id="navblockmes">
+          <div class="card hoverable" style="background-color:#FFF; height:inherit">
+            <div class="navitems"> <i class="material-icons" style="color: #1976D2; font-size:100%">create</i>
 
-                            <div class="divider" style="margin: 7px 0 7px 0;"></div> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">event</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Okt. 2015 - Heute</i>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <a href="#contact" alt="Write to me" class="hide-on-large-only">
+      <div class="container row" style="padding-top: 1.5rem">
+        <div class="col s12 m12">
+          <div class="card" style="background-color: #fff;">
+            <div class="card-content" style="padding:10px 20px 10px 20px">
+              <span class="badge"><i class="material-icons" style="color: #1976D2; line-height: inherit; font-size:1.8rem">create</i></span>
+              <i style="font-style:normal; font-size:18pt; text-align:left; color:#1976D2;">Nachricht schreiben</i>
 
-                            <br>
-                            <a href="https://www.google.de/maps/place/RWTH+Aachen+University/@50.7800778,6.0656869,17z/data=!3m1!4b1!4m2!3m1!1s0x47c09979a153d7b5:0x8916c62aa69322e7?hl=en" style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">place</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Aachen, Deutschland</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <!--END Menu-->
+    <!--START Education-->
+    <div class="container row" id="education" style="padding-top: 1rem">
+      <div class="col s12 m12">
+        <div class="card" style="background-color: #fbcb43;">
+          <div class="card-content">
+            <span class="badge"><i class="material-icons small" style="color: #FFF; line-height: inherit">school</i></span>
+            <i style="font-style:normal; font-size:20pt; text-align:left; color:#FFF;">Ausbildung</i>
+
+          </div>
+        </div>
+      </div>
+      <!--START Aachen-->
+      <div class="col s12 m12">
+        <div class="card white">
+          <div class="card-content">
+            <span class="badge">
+              <img src="https://dl.dropboxusercontent.com/s/19oec8wiqsm61bv/RWTH.png" alt="RWTH Aachen" style="height:20px">
+            </span>
+            <i style="font-style:normal; font-size:16pt; text-align:left">RWTH Aachen</i>
+
+            <br> <i style="font-style:normal; font-size:10pt; text-align:left; color:grey">Master of Science<br>Betriebswirtschaftslehre - Innovation, Entrepreneurship & Marketing</i>
+
+            <div class="divider" style="margin: 7px 0 7px 0;"></div> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">event</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Okt. 2015 - Heute</i>
+
+            <br>
+            <a href="https://www.google.de/maps/place/RWTH+Aachen+University/@50.7800778,6.0656869,17z/data=!3m1!4b1!4m2!3m1!1s0x47c09979a153d7b5:0x8916c62aa69322e7?hl=en" style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">place</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Aachen, Deutschland</i>
 
                             </a>
-                        </div>
-                    </div>
-                </div>
-                <!--END Aachen-->
-                <!--START Pforzheim-->
-                <div class="col s12 m6">
-                    <div class="card white">
-                        <div class="card-content"> <span class="badge"><img src="https://dl.dropboxusercontent.com/s/lu9terteq7swsnc/HSPforzheim.png" alt="HS Pforzheim" style="height:15px"></span>
+          </div>
+        </div>
+      </div>
+      <!--END Aachen-->
+      <!--START Pforzheim-->
+      <div class="col s12 m6">
+        <div class="card white">
+          <div class="card-content">
+            <span class="badge">
+              <img src="https://dl.dropboxusercontent.com/s/lu9terteq7swsnc/HSPforzheim.png" alt="HS Pforzheim" style="height:15px">
+            </span>
 
-<i style="font-style:normal; font-size:16pt; text-align:left">Hochschule Pforzheim</i>
+            <i style="font-style:normal; font-size:16pt; text-align:left">Hochschule Pforzheim</i>
 
-                            <br>
-<i style="font-style:normal; font-size:10pt; text-align:left; color:grey">Bachelor of Science<br>Betriebswirtschaftslehre - Internationales Marketing</i>
+            <br>
+            <i style="font-style:normal; font-size:10pt; text-align:left; color:grey">Bachelor of Science<br>Betriebswirtschaftslehre - Internationales Marketing</i>
 
-                            <div class="divider" style="margin: 7px 0 7px 0;"></div>
-<i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">grade</i><b style="font-size:10pt; text-align:left; color:grey"> Note 1.3</b>
+            <div class="divider" style="margin: 7px 0 7px 0;"></div>
+            <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">grade</i><b style="font-size:10pt; text-align:left; color:grey"> Note 1.3</b>
 
-                            <br>
-<i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">event</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Sept. 2011- Aug. 2015</i>
+            <br>
+            <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">event</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Sept. 2011- Aug. 2015</i>
 
-                            <br>
-                            <a href="https://www.google.de/maps/place/Pforzheim+University/@48.8789045,8.7174352,17z/data=!3m1!4b1!4m2!3m1!1s0x479771e361c1c105:0xf080269e06186a53?hl=en" style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">place</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Pforzheim, Deutschland</i>
-
-                            </a>
-                            <div class="divider" style="margin: 7px 0 7px 0;"></div> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">local_library</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Thesis: Location-based Marketing in Offline Retail</i>
-
-                            <br> <i style="font-style:normal; font-size:8pt; text-align:left; color:grey">Analysis of the theory around the concept of location-based marketing and its technical implications and possible ways of implementation for offline retail in Germany. Development of hypotheses and recuiting of expert interview partners. Qualitative research to test hypotheses. Detailed elaboration of recommendations and guidelines for offline retailers in Germany. </i>
-
-                            <br>
-                            <br>
-                            <a href="http://www.campusx.org/" style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">group_work</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Campus X</i>
+            <br>
+            <a href="https://www.google.de/maps/place/Pforzheim+University/@48.8789045,8.7174352,17z/data=!3m1!4b1!4m2!3m1!1s0x479771e361c1c105:0xf080269e06186a53?hl=en" style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">place</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Pforzheim, Deutschland</i>
 
                             </a>
-                            <br>
-<i style="font-style:normal; font-size:8pt; text-align:left; color:grey">Student organized career platform of the university. Leading the marketig and print team. Detailled planning, writing, designing and printing of a magazine.</i>
+            <div class="divider" style="margin: 7px 0 7px 0;"></div> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">local_library</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Thesis: Location-based Marketing in Offline Retail</i>
 
-                            <!--<div
+            <br> <i style="font-style:normal; font-size:8pt; text-align:left; color:grey">Analysis of the theory around the concept of location-based marketing and its technical implications and possible ways of implementation for offline retail in Germany. Development of hypotheses and recuiting of expert interview partners. Qualitative research to test hypotheses. Detailed elaboration of recommendations and guidelines for offline retailers in Germany. </i>
+
+            <br>
+            <br>
+            <a href="http://www.campusx.org/" style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">group_work</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Campus X</i>
+
+                            </a>
+            <br>
+            <i style="font-style:normal; font-size:8pt; text-align:left; color:grey">Student organized career platform of the university. Leading the marketig and print team. Detailled planning, writing, designing and printing of a magazine.</i>
+
+            <!--<div
                             class="divider" style="margin: 7px 0 7px 0;"></div>
                             <a href="docs/transcript_pforzheim.pdf" target="_blank" style="text-transform:none">
 <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">attach_file</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Zeugnis</i>
                             </a>-->
-                            <br>
-                        </div>
-                    </div>
-                </div>
-                <!--END Pforzheim-->
-                <!--START Ljubljana-->
-                <div class="col s12 m6">
-                    <div class="card white">
-                        <div class="card-content"> <span class="badge"><img src="https://dl.dropboxusercontent.com/s/78z75zokfw7l3l2/felu.png" alt="HS Pforzheim" style="height:35px"></span>
- <i style="font-style:normal; font-size:16pt; text-align:left">Universität Ljubljana</i>
+            <br>
+          </div>
+        </div>
+      </div>
+      <!--END Pforzheim-->
+      <!--START Ljubljana-->
+      <div class="col s12 m6">
+        <div class="card white">
+          <div class="card-content">
+            <span class="badge">
+              <img src="https://dl.dropboxusercontent.com/s/78z75zokfw7l3l2/felu.png" alt="HS Pforzheim" style="height:35px">
+            </span>
+            <i style="font-style:normal; font-size:16pt; text-align:left">Universität Ljubljana</i>
 
-                            <br> <i style="font-style:normal; font-size:10pt; text-align:left; color:grey">Bachelor of Science<br>Business and Economics Sciences - Marketing</i>
+            <br> <i style="font-style:normal; font-size:10pt; text-align:left; color:grey">Bachelor of Science<br>Business and Economics Sciences - Marketing</i>
 
-                            <div class="divider" style="margin: 7px 0 7px 0;"></div> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">grade</i><b style="font-size:10pt; text-align:left; color:grey"> Note 1.3</b>
+            <div class="divider" style="margin: 7px 0 7px 0;"></div> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">grade</i><b style="font-size:10pt; text-align:left; color:grey"> Note 1.3</b>
 
-                            <br> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">event</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Feb. 2013- Feb. 2014</i>
+            <br> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">event</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Feb. 2013- Feb. 2014</i>
 
-                            <br>
-                            <a href="https://www.google.de/maps/place/Univerza+v+Ljubljani,+ekonomska+fakulteta/@46.0740168,14.516449,17z/data=!4m6!1m3!3m2!1s0x476532ecebf91285:0xb504a9d6d5d5c36c!2sUniverza+v+Ljubljani,+ekonomska+fakulteta!3m1!1s0x476532ecebf91285:0xb504a9d6d5d5c36c?hl=en" style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">place</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Ljubljana, Slowenien</i>
+            <br>
+            <a href="https://www.google.de/maps/place/Univerza+v+Ljubljani,+ekonomska+fakulteta/@46.0740168,14.516449,17z/data=!4m6!1m3!3m2!1s0x476532ecebf91285:0xb504a9d6d5d5c36c!2sUniverza+v+Ljubljani,+ekonomska+fakulteta!3m1!1s0x476532ecebf91285:0xb504a9d6d5d5c36c?hl=en"
+            style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">place</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Ljubljana, Slowenien</i>
 
                             </a>
-                            <!--<div class="divider" style="margin: 7px 0 7px 0;"></div>
+            <!--<div class="divider" style="margin: 7px 0 7px 0;"></div>
                         <a href="docs/transcript_Ljubljana.pdf" target="_blank" style="text-transform:none">
                             <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">attach_file</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Zeugnis</i>
                         </a>-->
-                            <br>
-                        </div>
-                    </div>
-                </div>
-                <!--END Ljubljana-->
-                <!--START Roma-->
-                <div class="col s12 m6">
-                    <div class="card white">
-                        <div class="card-content"> <span class="badge"><img src="https://dl.dropboxusercontent.com/s/8cg6r8o9lsi6ab8/dsr.png" alt="Deutsche Schule Rom" style="height:30px"></span>
- <i style="font-style:normal; font-size:16pt; text-align:left">Deutsche Schule Rom</i>
+            <br>
+          </div>
+        </div>
+      </div>
+      <!--END Ljubljana-->
+      <!--START Roma-->
+      <div class="col s12 m6">
+        <div class="card white">
+          <div class="card-content">
+            <span class="badge">
+              <img src="https://dl.dropboxusercontent.com/s/8cg6r8o9lsi6ab8/dsr.png" alt="Deutsche Schule Rom" style="height:30px">
+            </span>
+            <i style="font-style:normal; font-size:16pt; text-align:left">Deutsche Schule Rom</i>
 
-                            <br> <i style="font-style:normal; font-size:10pt; text-align:left; color:grey">Abitur</i>
+            <br> <i style="font-style:normal; font-size:10pt; text-align:left; color:grey">Abitur</i>
 
-                            <div class="divider" style="margin: 7px 0 7px 0;"></div> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">grade</i><b style="font-size:10pt; text-align:left; color:grey"> Note 1.1</b>
+            <div class="divider" style="margin: 7px 0 7px 0;"></div> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">grade</i><b style="font-size:10pt; text-align:left; color:grey"> Note 1.1</b>
 
-                            <br> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">event</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Sept. 2007 - Mai 2011</i>
+            <br> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">event</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Sept. 2007 - Mai 2011</i>
 
-                            <br>
-                            <a href="https://www.google.de/maps/place/Deutsche+Schule+Rom/@41.890127,12.4272618,17z/data=!3m1!4b1!4m2!3m1!1s0x132f5fe606750cd3:0xfc51f9c30ed3c784?hl=en" style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">place</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Rom, Italien</i>
-
-                            </a>
-                            <div class="divider" style="margin: 7px 0 7px 0;"></div>
-                            <a href="http://www.bimun.hu/" style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">group_work</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> BIMUN</i>
-
-                            </a>
-                            <br> <i style="font-style:normal; font-size:8pt; text-align:left; color:grey">Budapest Model United Nations representing Austria as Ambassador in the Disarmament and International Security Committee</i>
-
-                            <br>
-                            <br>
-                            <a href="http://www.klassik-stiftung.de/bildung/schueler-und-jugendliche/cicerone/" style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">group_work</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Cicerone Projekt Weimar</i>
+            <br>
+            <a href="https://www.google.de/maps/place/Deutsche+Schule+Rom/@41.890127,12.4272618,17z/data=!3m1!4b1!4m2!3m1!1s0x132f5fe606750cd3:0xfc51f9c30ed3c784?hl=en" style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">place</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Rom, Italien</i>
 
                             </a>
-                            <br> <i style="font-style:normal; font-size:8pt; text-align:left; color:grey">Ausbildung zum Touristenführer</i>
+            <div class="divider" style="margin: 7px 0 7px 0;"></div>
+            <a href="http://www.bimun.hu/" style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">group_work</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> BIMUN</i>
 
-                            <!--<div class="divider" style="margin: 7px 0 7px 0;"></div>
+                            </a>
+            <br> <i style="font-style:normal; font-size:8pt; text-align:left; color:grey">Budapest Model United Nations representing Austria as Ambassador in the Disarmament and International Security Committee</i>
+
+            <br>
+            <br>
+            <a href="http://www.klassik-stiftung.de/bildung/schueler-und-jugendliche/cicerone/" style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">group_work</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Cicerone Projekt Weimar</i>
+
+                            </a>
+            <br> <i style="font-style:normal; font-size:8pt; text-align:left; color:grey">Ausbildung zum Touristenführer</i>
+
+            <!--<div class="divider" style="margin: 7px 0 7px 0;"></div>
                         <a href="docs/abitur.pdf" target="_blank" style="text-transform:none">
                             <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">attach_file</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Zeugnis</i>
                         </a>-->
-                            <br>
-                        </div>
-                    </div>
-                </div>
-                <!--END Roma-->
-                <!--START Starnberg-->
-                <div class="col s12 m6">
-                    <div class="card white">
-                        <div class="card-content"> <span class="badge"><img src="https://dl.dropboxusercontent.com/s/9qvanetijag6hgq/gymsta.png" alt="Gymnasium Starnberg" style="height:30px"></span>
- <i style="font-style:normal; font-size:16pt; text-align:left">Gymnasium Starnberg</i>
+            <br>
+          </div>
+        </div>
+      </div>
+      <!--END Roma-->
+      <!--START Starnberg-->
+      <div class="col s12 m6">
+        <div class="card white">
+          <div class="card-content">
+            <span class="badge">
+              <img src="https://dl.dropboxusercontent.com/s/9qvanetijag6hgq/gymsta.png" alt="Gymnasium Starnberg" style="height:30px">
+            </span>
+            <i style="font-style:normal; font-size:16pt; text-align:left">Gymnasium Starnberg</i>
 
-                            <br> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">event</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> 2002- Sept. 2007</i>
+            <br> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">event</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> 2002- Sept. 2007</i>
 
-                            <br>
-                            <a href="https://www.google.de/maps/place/Gymnasium+Starnberg/@48.0030821,11.3444023,17z/data=!3m1!4b1!4m2!3m1!1s0x479dd02ebed248df:0x13fc307ac231dcfa?hl=en" style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">place</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Starnberg, Deutschland</i>
-
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!--END Starnberg-->
-                <!--START Pretoria-->
-                <div class="col s12 m6">
-                    <div class="card white">
-                        <div class="card-content"> <span class="badge"><img src="https://dl.dropboxusercontent.com/s/842q53sc2ewc394/crawford.png" alt="Crawford" style="height:45px"></span>
- <i style="font-style:normal; font-size:16pt; text-align:left">Crawford Preparatory</i>
-
-                            <br> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">event</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Jan. 1999 - Dez. 2001</i>
-
-                            <br>
-                            <a href="https://www.google.de/maps/place/Crawford+Prepatory+School+(Private+Primary+School)/@-25.7657798,28.2156221,17z/data=!3m1!4b1!4m2!3m1!1s0x1e95618497404b63:0xa35a71286cfb9003" style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">place</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Pretoria, Süd Afrika</i>
+            <br>
+            <a href="https://www.google.de/maps/place/Gymnasium+Starnberg/@48.0030821,11.3444023,17z/data=!3m1!4b1!4m2!3m1!1s0x479dd02ebed248df:0x13fc307ac231dcfa?hl=en" style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">place</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Starnberg, Deutschland</i>
 
                             </a>
-                        </div>
-                    </div>
-                </div>
-                <!--END Pretoria-->
-            </div>
-            <!--END Education-->
-            <!--START Business-->
-            <div class="row container" id="business" style="padding-top: 1rem">
-                <div class="col s12 m12">
-                    <div class="card" style="background-color: #43A047">
-                        <div class="card-content"> <span class="badge"><i class="material-icons small" style="color: #FFF; line-height: inherit">business</i></span>
- <i style="font-style:normal; font-size:20pt; text-align:left; color:#FFF">Berufliche Erfahrung</i>
+          </div>
+        </div>
+      </div>
+      <!--END Starnberg-->
+      <!--START Pretoria-->
+      <div class="col s12 m6">
+        <div class="card white">
+          <div class="card-content">
+            <span class="badge">
+              <img src="https://dl.dropboxusercontent.com/s/842q53sc2ewc394/crawford.png" alt="Crawford" style="height:45px">
+            </span>
+            <i style="font-style:normal; font-size:16pt; text-align:left">Crawford Preparatory</i>
 
-                        </div>
-                    </div>
-                </div>
-                <!--START Lufthansa-->
-                <div class="col s12 m6">
-                    <div class="card white">
-                        <div class="card-content"> <span class="badge"><img src="https://dl.dropboxusercontent.com/s/hn88eo6fh3vpnzb/LH.png" alt="Lufthansa" style="height:35px"></span>
- <i style="font-style:normal; font-size:16pt; text-align:left">Lufthansa AG</i>
+            <br> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">event</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Jan. 1999 - Dez. 2001</i>
 
-                            <br> <i style="font-style:normal; font-size:10pt; text-align:left; color:grey">Praktikum<br>Marketing - Kundenbindung & Strategie</i>
-
-                            <div class="divider" style="margin: 7px 0 7px 0;"></div> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">event</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> März 2014 - Aug. 2014</i>
-
-                            <br>
-                            <a href="https://www.google.de/maps/place/THE+SQUAIRE+-+NEW+WORK+CITY/@50.05275,8.5690255,18z/data=!4m2!3m1!1s0x0000000000000000:0xc82a80b529b22f47?hl=en" style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">place</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Frankfurt, Deutschland</i>
+            <br>
+            <a href="https://www.google.de/maps/place/Crawford+Prepatory+School+(Private+Primary+School)/@-25.7657798,28.2156221,17z/data=!3m1!4b1!4m2!3m1!1s0x1e95618497404b63:0xa35a71286cfb9003" style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">place</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Pretoria, Süd Afrika</i>
 
                             </a>
-                            <div class="divider" style="margin: 7px 0 7px 0;"></div> <i style="font-style:normal; font-size:8pt; text-align:left; color:grey">Strategic Management for Miles & More bonus and status program. Worldwide airline partner communication. Development of loyalty and communication concepts for top customers of Lufthansa and its partners.
+          </div>
+        </div>
+      </div>
+      <!--END Pretoria-->
+    </div>
+    <!--END Education-->
+    <!--START Business-->
+    <div class="row container" id="business" style="padding-top: 1rem">
+      <div class="col s12 m12">
+        <div class="card" style="background-color: #43A047">
+          <div class="card-content">
+            <span class="badge"><i class="material-icons small" style="color: #FFF; line-height: inherit">business</i></span>
+            <i style="font-style:normal; font-size:20pt; text-align:left; color:#FFF">Berufliche Erfahrung</i>
+
+          </div>
+        </div>
+      </div>
+      <!--START Lufthansa-->
+      <div class="col s12 m6">
+        <div class="card white">
+          <div class="card-content">
+            <span class="badge">
+              <img src="https://dl.dropboxusercontent.com/s/hn88eo6fh3vpnzb/LH.png" alt="Lufthansa" style="height:35px">
+            </span>
+            <i style="font-style:normal; font-size:16pt; text-align:left">Lufthansa AG</i>
+
+            <br> <i style="font-style:normal; font-size:10pt; text-align:left; color:grey">Praktikum<br>Marketing - Kundenbindung & Strategie</i>
+
+            <div class="divider" style="margin: 7px 0 7px 0;"></div> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">event</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> März 2014 - Aug. 2014</i>
+
+            <br>
+            <a href="https://www.google.de/maps/place/THE+SQUAIRE+-+NEW+WORK+CITY/@50.05275,8.5690255,18z/data=!4m2!3m1!1s0x0000000000000000:0xc82a80b529b22f47?hl=en" style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">place</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Frankfurt, Deutschland</i>
+
+                            </a>
+            <div class="divider" style="margin: 7px 0 7px 0;"></div> <i style="font-style:normal; font-size:8pt; text-align:left; color:grey">Strategic Management for Miles & More bonus and status program. Worldwide airline partner communication. Development of loyalty and communication concepts for top customers of Lufthansa and its partners.
                                                                                      Active participation in a strategic company wide HR-Workshop and meetings regarding different marketing topics with a strong focus on customer loyalty.
                                                                                      Data driven, creative and conceptional work on teams and individually.</i>
 
-                            <!--<div class="divider" style="margin: 7px 0 7px 0;"></div>
+            <!--<div class="divider" style="margin: 7px 0 7px 0;"></div>
                             <a href="docs/lufthansa.pdf" target="_blank" style="text-transform:none">
                                 <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">attach_file</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Zeugnis</i>
                             </a>-->
-                            <br>
-                        </div>
-                    </div>
-                </div>
-                <!--END Lufthansa-->
-                <!--START Avira-->
-                <div class="col s12 m6">
-                    <div class="card white">
-                        <div class="card-content"> <span class="badge"><img src="https://dl.dropboxusercontent.com/s/gvyaf2c0neyk8yv/avira.png" alt="Avira" style="height:35px"></span>
- <i style="font-style:normal; font-size:16pt; text-align:left">Avira GmbH</i>
+            <br>
+          </div>
+        </div>
+      </div>
+      <!--END Lufthansa-->
+      <!--START Avira-->
+      <div class="col s12 m6">
+        <div class="card white">
+          <div class="card-content">
+            <span class="badge">
+              <img src="https://dl.dropboxusercontent.com/s/gvyaf2c0neyk8yv/avira.png" alt="Avira" style="height:35px">
+            </span>
+            <i style="font-style:normal; font-size:16pt; text-align:left">Avira GmbH</i>
 
-                            <br> <i style="font-style:normal; font-size:10pt; text-align:left; color:grey">Praktikum<br>Marketing & Usability</i>
+            <br> <i style="font-style:normal; font-size:10pt; text-align:left; color:grey">Praktikum<br>Marketing & Usability</i>
 
-                            <div class="divider" style="margin: 7px 0 7px 0;"></div> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">event</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Aug. 2012 - Sept. 2012</i>
+            <div class="divider" style="margin: 7px 0 7px 0;"></div> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">event</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Aug. 2012 - Sept. 2012</i>
 
-                            <br>
-                            <a href="https://www.google.de/maps/place/Avira+B.V./@51.9542037,6.300182,17z/data=!3m1!4b1!4m2!3m1!1s0x47c784b959920403:0x30dd5b3292e76341?hl=en" style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">place</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Doetinchem, Niederlande</i>
+            <br>
+            <a href="https://www.google.de/maps/place/Avira+B.V./@51.9542037,6.300182,17z/data=!3m1!4b1!4m2!3m1!1s0x47c784b959920403:0x30dd5b3292e76341?hl=en" style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">place</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Doetinchem, Niederlande</i>
 
                             </a>
-                            <div class="divider" style="margin: 7px 0 7px 0;"></div> <i style="font-style:normal; font-size:8pt; text-align:left; color:grey">Creation of usability guidelines and guidelines for a usability testing environment based on own research. Active collaboration with designers and developers of different teams on the Android and Desktop applications. Highly involved in internal usability feedback and feedback analysis.</i>
+            <div class="divider" style="margin: 7px 0 7px 0;"></div> <i style="font-style:normal; font-size:8pt; text-align:left; color:grey">Creation of usability guidelines and guidelines for a usability testing environment based on own research. Active collaboration with designers and developers of different teams on the Android and Desktop applications. Highly involved in internal usability feedback and feedback analysis.</i>
 
-                            <!--<div
+            <!--<div
                             class="divider" style="margin: 7px 0 7px 0;"></div>
                             <a href="docs/avira_usability.pdf" target="_blank" style="text-transform:none">
                                 <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">attach_file</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Usability Guideline</i>
                             </a>-->
-                            <br>
-                        </div>
-                    </div>
-                </div>
-                <!--END Avira-->
-                <!--START IST Cardiology-->
-                <div class="col s12 m6">
-                    <div class="card white">
-                        <div class="card-content"> <span class="badge"><img src="https://dl.dropboxusercontent.com/s/pzvatvn92oupmkp/ist.png" alt="IST Cardiology" style="height:30px"></span>
- <i style="font-style:normal; font-size:16pt; text-align:left">IST Cardiology</i>
+            <br>
+          </div>
+        </div>
+      </div>
+      <!--END Avira-->
+      <!--START IST Cardiology-->
+      <div class="col s12 m6">
+        <div class="card white">
+          <div class="card-content">
+            <span class="badge">
+              <img src="https://dl.dropboxusercontent.com/s/pzvatvn92oupmkp/ist.png" alt="IST Cardiology" style="height:30px">
+            </span>
+            <i style="font-style:normal; font-size:16pt; text-align:left">IST Cardiology</i>
 
-                            <br> <i style="font-style:normal; font-size:10pt; text-align:left; color:grey">Praktikum</i>
+            <br> <i style="font-style:normal; font-size:10pt; text-align:left; color:grey">Praktikum</i>
 
-                            <div class="divider" style="margin: 7px 0 7px 0;"></div> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">event</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Juli 2010</i>
+            <div class="divider" style="margin: 7px 0 7px 0;"></div> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">event</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Juli 2010</i>
 
-                            <br>
-                            <a href="https://www.google.de/maps/place/Ist+Cardiology/@49.2066541,-0.3890744,17z/data=!3m1!4b1!4m2!3m1!1s0x480a5d2a14bc5bd1:0xbebf78d030a7f1c8?hl=en" style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">place</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Caen, Frankreich</i>
+            <br>
+            <a href="https://www.google.de/maps/place/Ist+Cardiology/@49.2066541,-0.3890744,17z/data=!3m1!4b1!4m2!3m1!1s0x480a5d2a14bc5bd1:0xbebf78d030a7f1c8?hl=en" style="text-transform:none" target="_blank"><i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">place</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Caen, Frankreich</i>
 
                             </a>
-                            <br>
-                        </div>
-                    </div>
-                </div>
-                <!--END IST Cardiology-->
-            </div>
-            <!--END Business-->
-            <!--START Additional-->
-            <div class="row container" id="additional" style="padding-top: 1rem">
-                <div class="col s12 m12">
-                    <div class="card" style="background-color: #E53935">
-                        <div class="card-content"> <span class="badge"><i class="material-icons small" style="color: #FFF; line-height: inherit">more_vert</i></span>
- <i style="font-style:normal; font-size:20pt; text-align:left; color:#FFF">Weiteres</i>
+            <br>
+          </div>
+        </div>
+      </div>
+      <!--END IST Cardiology-->
+    </div>
+    <!--END Business-->
+    <!--START Additional-->
+    <div class="row container" id="additional" style="padding-top: 1rem">
+      <div class="col s12 m12">
+        <div class="card" style="background-color: #E53935">
+          <div class="card-content">
+            <span class="badge"><i class="material-icons small" style="color: #FFF; line-height: inherit">more_vert</i></span>
+            <i style="font-style:normal; font-size:20pt; text-align:left; color:#FFF">Weiteres</i>
 
-                        </div>
-                    </div>
-                </div>
-                <!--START Languages-->
-                <div class="col s12 m6">
-                    <div class="card white">
-                        <div class="card-content"> <span class="badge"><i class="material-icons small" style="color: #E53935; line-height: inherit">language</i></span>
- <i style="font-style:normal; font-size:16pt; text-align:left">Sprachen</i>
+          </div>
+        </div>
+      </div>
+      <!--START Languages-->
+      <div class="col s12 m6">
+        <div class="card white">
+          <div class="card-content">
+            <span class="badge"><i class="material-icons small" style="color: #E53935; line-height: inherit">language</i></span>
+            <i style="font-style:normal; font-size:16pt; text-align:left">Sprachen</i>
 
-                            <br>
-                            <table>
-                                <tbody>
-                                    <tr style="font-size:11pt; color: grey;">
-                                        <td style="font-weight:bold">Deutsch</td>
-                                        <td>Muttersprache</td>
-                                    </tr>
-                                    <tr style="font-size:11pt; color: grey;">
-                                        <td style="font-weight:bold">Englisch</td>
-                                        <td>Fließend</td>
-                                    </tr>
-                                    <tr style="font-size:11pt; color: grey;">
-                                        <td style="font-weight:bold">Italienisch</td>
-                                        <td>Mündlich gut, schriftlich Grundkenntnisse</td>
-                                    </tr>
-                                    <tr style="font-size:11pt; color: grey;">
-                                        <td style="font-weight:bold">Französisch</td>
-                                        <td>Grundkenntnisse</td>
-                                    </tr>
-                            </table>
-                            <!--<div class="divider" style="margin: 7px 0 7px 0;"></div>
+            <br>
+            <table>
+              <tbody>
+                <tr style="font-size:11pt; color: grey;">
+                  <td style="font-weight:bold">Deutsch</td>
+                  <td>Muttersprache</td>
+                </tr>
+                <tr style="font-size:11pt; color: grey;">
+                  <td style="font-weight:bold">Englisch</td>
+                  <td>Fließend</td>
+                </tr>
+                <tr style="font-size:11pt; color: grey;">
+                  <td style="font-weight:bold">Italienisch</td>
+                  <td>Mündlich gut, schriftlich Grundkenntnisse</td>
+                </tr>
+                <tr style="font-size:11pt; color: grey;">
+                  <td style="font-weight:bold">Französisch</td>
+                  <td>Grundkenntnisse</td>
+                </tr>
+            </table>
+            <!--<div class="divider" style="margin: 7px 0 7px 0;"></div>
                             <a href="docs/toefl.pdf" target="_blank" style="text-transform:none">
                                 <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">attach_file</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> TOEFL</i>
                             </a>
@@ -495,477 +559,498 @@
                             <a href="docs/delf.pdf" target="_blank" style="text-transform:none">
                                 <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">attach_file</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> DELF</i>
                             </a>-->
-                            <br>
-                        </div>
-                    </div>
-                </div>
-                <!--END Languages-->
-                <!--START Skills-->
-                <div class="col s12 m6">
-                    <div class="card white">
-                        <div class="card-content"> <span class="badge"><i class="material-icons small" style="color: #E53935; line-height: inherit">build</i></span>
- <i style="font-style:normal; font-size:16pt; text-align:left">Kenntnisse</i>
+            <br>
+          </div>
+        </div>
+      </div>
+      <!--END Languages-->
+      <!--START Skills-->
+      <div class="col s12 m6">
+        <div class="card white">
+          <div class="card-content">
+            <span class="badge"><i class="material-icons small" style="color: #E53935; line-height: inherit">build</i></span>
+            <i style="font-style:normal; font-size:16pt; text-align:left">Kenntnisse</i>
 
-                            <div class="divider" style="margin: 15px 0 7px 0; background-color:#FFF"></div>
-                            <div class="chip">Strategisches Marketing</div>
-                            <div class="chip">Internationale Wirtschaftsbeziehungen</div>
-                            <div class="chip">Gruppenarbeit</div>
-                            <div class="chip">Kundenbindung</div>
-                            <div class="chip">Internationales Marketing</div>
-                            <div class="chip">Interkulturelle Kommunikation</div>
-                            <div class="chip">Location-based Marketing</div>
-                            <div class="chip">PowerPoint</div>
-                            <div class="chip">Google+</div>
-                            <div class="chip">Excel</div>
-                            <div class="chip">Wirtschaft</div>
-                            <div class="chip">Internationale Beziehungen</div>
-                            <div class="chip">Social Media Marketing</div>
-                            <div class="chip">Marketing</div>
-                            <div class="chip">Langfristige Kundenbindung</div>
-                            <div class="chip">Top-Kundenbindung</div>
-                            <div class="chip">Usability Testing</div>
-                            <div class="chip">Mobile Geräte</div>
-                            <div class="chip">Word</div>
-                            <div class="chip">Grundkenntnisse Web Entwicklung</div>
-                        </div>
-                    </div>
-                </div>
-                <!--END Skills-->
-                <!--START Links-->
-                <div class="col s12 m6">
-                    <div class="card white">
-                        <div class="card-content"> <span class="badge"><i class="material-icons small" style="color: #E53935; line-height: inherit">link</i></span>
- <i style="font-style:normal; font-size:16pt; text-align:left">Links</i>
+            <div class="divider" style="margin: 15px 0 7px 0; background-color:#FFF"></div>
+            <div class="chip">Strategisches Marketing</div>
+            <div class="chip">Internationale Wirtschaftsbeziehungen</div>
+            <div class="chip">Gruppenarbeit</div>
+            <div class="chip">Kundenbindung</div>
+            <div class="chip">Internationales Marketing</div>
+            <div class="chip">Interkulturelle Kommunikation</div>
+            <div class="chip">Location-based Marketing</div>
+            <div class="chip">PowerPoint</div>
+            <div class="chip">Google+</div>
+            <div class="chip">Excel</div>
+            <div class="chip">Wirtschaft</div>
+            <div class="chip">Internationale Beziehungen</div>
+            <div class="chip">Social Media Marketing</div>
+            <div class="chip">Marketing</div>
+            <div class="chip">Langfristige Kundenbindung</div>
+            <div class="chip">Top-Kundenbindung</div>
+            <div class="chip">Usability Testing</div>
+            <div class="chip">Mobile Geräte</div>
+            <div class="chip">Word</div>
+            <div class="chip">Grundkenntnisse Web Entwicklung</div>
+          </div>
+        </div>
+      </div>
+      <!--END Skills-->
+      <!--START Links-->
+      <div class="col s12 m6">
+        <div class="card white">
+          <div class="card-content">
+            <span class="badge"><i class="material-icons small" style="color: #E53935; line-height: inherit">link</i></span>
+            <i style="font-style:normal; font-size:16pt; text-align:left">Links</i>
 
-                            <div class="divider" style="margin: 15px 0 7px 0; background-color:#FFF"></div>
-                            <a href="http://www.panicotippspiel.com/" style="text-transform:none" target="_blank"> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">link</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Panicotippspiel</i>
+            <div class="divider" style="margin: 15px 0 7px 0; background-color:#FFF"></div>
+            <a href="http://www.panicotippspiel.com/" style="text-transform:none" target="_blank"> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">link</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Panicotippspiel</i>
 
-                            </a>
-                            <br><i style="font-style:normal; font-size:8pt; text-align:left; color:grey">Small private soccer betting game between friends. Developed from scratch with HTML 5, PHP, Google Scripts (Javascript) and Google Sheets. Implementation as responsive website and webapp.</i>
+            </a>
+            <br><i style="font-style:normal; font-size:8pt; text-align:left; color:grey">Small private soccer betting game between friends. Developed from scratch with HTML 5, PHP, Google Scripts (Javascript) and Google Sheets. Implementation as responsive website and webapp.</i>
 
-                            <div
-                            class="divider" style="margin: 7px 0 7px 0;"></div>
-                        <a href="https://script.google.com/macros/s/AKfycbwlJ6epEzl2Tpp_KalWyZOTTEBoV8dy-sU_Sp0iMc8-wBl-TOWF/exec" style="text-transform:none" target="_blank"> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">link</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Boardingpass Now</i>
+            <div class="divider" style="margin: 7px 0 7px 0;"></div>
+            <a href="https://script.google.com/macros/s/AKfycbwlJ6epEzl2Tpp_KalWyZOTTEBoV8dy-sU_Sp0iMc8-wBl-TOWF/exec" style="text-transform:none" target="_blank"> <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">link</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Boardingpass Now</i>
 
-                        </a>
-                        <br><i style="font-style:normal; font-size:8pt; text-align:left; color:grey">Google Scripts Tool that allows for sending yourself an email in order to display a boarding pass QR-Code in Google Now. Built because many airlines don't dupport this handy feature. Fully built with Google Scripts (Javascript) and Google Sheets.</i>
+            </a>
+            <br><i style="font-style:normal; font-size:8pt; text-align:left; color:grey">Google Scripts Tool that allows for sending yourself an email in order to display a boarding pass QR-Code in Google Now. Built because many airlines don't dupport this handy feature. Fully built with Google Scripts (Javascript) and Google Sheets.</i>
 
-                    </div>
-                </div>
+          </div>
+        </div>
+      </div>
+      <!--END Links-->
+      <!--START Interests-->
+      <div class="col s12 m6">
+        <div class="card white">
+          <div class="card-content">
+            <span class="badge"><i class="material-icons small" style="color: #E53935; line-height: inherit">flare</i></span>
+            <i style="font-style:normal; font-size:16pt; text-align:left">Interessen</i>
+
+            <div class="divider" style="margin: 15px 0 7px 0; background-color:#FFF"></div>
+            <div class="chip">IT Entwicklungen</div>
+            <div class="chip">Internationale Beziehungen</div>
+            <div class="chip">User-Centered Design</div>
+            <div class="chip">Internationale Politik</div>
+            <div class="chip">Wissenschaft</div>
+            <div class="chip">Weltall</div>
+            <div class="chip">Human Space Travel</div>
+            <div class="chip">Sport</div>
+            <div class="chip">Fußball</div>
+            <div class="chip">FC Bayern München</div>
+            <div class="chip">Internationale Nachrichten</div>
+            <div class="chip">Startups</div>
+            <div class="chip">Website Development</div>
+            <div class="chip">Internationales Reisen</div>
+            <div class="chip">Neue Kulturen</div>
+            <div class="chip">Kochen</div>
+            <div class="chip">Fahrradfahren</div>
+          </div>
+        </div>
+      </div>
+      <!--END Interests-->
+    </div>
+    <!--END Additional-->
+    <!--START Social Media-->
+    <div class="row container" id="socialmedia" style="padding-top: 1rem">
+      <div class="col s12 m12 socialcard">
+        <div class="card" style="background-color: #1976D2">
+          <div class="card-content">
+            <span class="badge"><i class="material-icons small" style="color: #FFF; line-height: inherit">people</i></span>
+            <i style="font-style:normal; font-size:20pt; text-align:left; color:#FFF">Online Profile</i>
+
+          </div>
+        </div>
+      </div>
+      <!--START Google Plus-->
+      <div class="col s12 m6 socialcard">
+        <div class="card white">
+          <a href="http://google.com/+MaxvonBeust" target="_blank" rel="me">
+            <div class="col s2 m2" style="background-color:#DD5044;">
+              <img src="https://dl.dropboxusercontent.com/s/8awf9dx3r50wytt/gplus.png" class="responsive-img center-align">
+              <br>
             </div>
-            <!--END Links-->
-            <!--START Interests-->
-            <div class="col s12 m6">
-                <div class="card white">
-                    <div class="card-content"> <span class="badge"><i class="material-icons small" style="color: #E53935; line-height: inherit">flare</i></span>
- <i style="font-style:normal; font-size:16pt; text-align:left">Interessen</i>
-
-                        <div class="divider" style="margin: 15px 0 7px 0; background-color:#FFF"></div>
-                        <div class="chip">IT Entwicklungen</div>
-                        <div class="chip">Internationale Beziehungen</div>
-                        <div class="chip">User-Centered Design</div>
-                        <div class="chip">Internationale Politik</div>
-                        <div class="chip">Wissenschaft</div>
-                        <div class="chip">Weltall</div>
-                        <div class="chip">Human Space Travel</div>
-                        <div class="chip">Sport</div>
-                        <div class="chip">Fußball</div>
-                        <div class="chip">FC Bayern München</div>
-                        <div class="chip">Internationale Nachrichten</div>
-                        <div class="chip">Startups</div>
-                        <div class="chip">Website Development</div>
-                        <div class="chip">Internationales Reisen</div>
-                        <div class="chip">Neue Kulturen</div>
-                        <div class="chip">Kochen</div>
-                        <div class="chip">Fahrradfahren</div>
-                    </div>
-                </div>
+            <div class="col s10" style="text-transform:none; color:#000; font-size:15pt; position: absolute; top: 50%; left: 60%;margin-right: -50%;transform: translate(-50%, -50%);">Max von Beust</div>
+          </a>
+        </div>
+      </div>
+      <!--END Google Plus-->
+      <!--START Twitter-->
+      <div class="col s12 m6 socialcard">
+        <div class="card white">
+          <a href="https://twitter.com/mvbeust" target="_blank" style="margin-right:0px" rel="me">
+            <div class="col s2 m2" id="twitterlogoposition" style="background-color:#00ACED;">
+              <img src="https://dl.dropboxusercontent.com/s/u9kgip0njk1u2ki/twitter.png" class="responsive-img center-align">
             </div>
-            <!--END Interests-->
+            <div class="col s10" id="twitterposition" style="text-transform:none; color:#000; font-size:15pt;">
+              <div style="position: relative; top: 35%; left: 1%;margin-right: -50%;"><i style="font-style:normal">@mvbeust</i>
+              </div>
             </div>
-            <!--END Additional-->
-            <!--START Social Media-->
-            <div class="row container" id="socialmedia" style="padding-top: 1rem">
-                <div class="col s12 m12 socialcard">
-                    <div class="card" style="background-color: #1976D2">
-                        <div class="card-content"> <span class="badge"><i class="material-icons small" style="color: #FFF; line-height: inherit">people</i></span>
- <i style="font-style:normal; font-size:20pt; text-align:left; color:#FFF">Online Profile</i>
-
-                        </div>
-                    </div>
-                </div>
-                <!--START Google Plus-->
-                <div class="col s12 m6 socialcard">
-                    <div class="card white">
-                        <a href="http://google.com/+MaxvonBeust" target="_blank" rel="me">
-                            <div class="col s2 m2" style="background-color:#DD5044;">
-                                <img src="https://dl.dropboxusercontent.com/s/8awf9dx3r50wytt/gplus.png" class="responsive-img center-align"><br>
-                            </div>
-                            <div class="col s10" style="text-transform:none; color:#000; font-size:15pt; position: absolute; top: 50%; left: 60%;margin-right: -50%;transform: translate(-50%, -50%);">Max von Beust</div>
-                        </a>
-                    </div>
-                </div>
-                <!--END Google Plus-->
-                <!--START Twitter-->
-                <div class="col s12 m6 socialcard">
-                    <div class="card white">
-                        <a href="https://twitter.com/mvbeust" target="_blank" style="margin-right:0px" rel="me">
-                            <div class="col s2 m2" id="twitterlogoposition" style="background-color:#00ACED;">
-                                <img src="https://dl.dropboxusercontent.com/s/u9kgip0njk1u2ki/twitter.png" class="responsive-img center-align">
-                            </div>
-                            <div class="col s10" id="twitterposition" style="text-transform:none; color:#000; font-size:15pt;">
-                                <div style="position: relative; top: 35%; left: 1%;margin-right: -50%;"><i style="font-style:normal">@mvbeust</i>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="col s12 center-align" style="border-top-color:#e0e0e0; border-top-width:1px; border-top-style:solid; height:370px">
-                            <a class="twitter-timeline" href="https://twitter.com/mvbeust" data-widget-id="648099628932550656" data-chrome="noheader noborders noscrollbar nofooter transparent">Tweets by @mvbeust</a>
-                            <script>
-                                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-                            </script>
-                        </div>
-                    </div>
-                </div>
-                <!--END Twitter-->
-                <!--START LinkedIn-->
-                <div class="col s12 m6 socialcard">
-                    <div class="card white">
-                        <a href="https://de.linkedin.com/in/maxvonbeust" target="_blank" rel="me">
-                            <div class="col s2 m2" style="background-color:#0077B5;">
-                                <img src="https://dl.dropboxusercontent.com/s/fybzd5sbqh34ntu/linkedin.png" class="responsive-img center-align">
-                            </div>
-                            <div class="col s10" style="text-transform:none; color:#000; font-size:15pt; position: absolute; top: 50%; left: 60%;margin-right: -50%;transform: translate(-50%, -50%);">Maximilian Frhr. v. Beust</div>
-                        </a>
-                    </div>
-                </div>
-                <!--END LinkedIn-->
-                <!--START Xing-->
-                <div class="col s12 m6 socialcard">
-                    <div class="card white">
-                        <a href="https://www.xing.com/profile/Maximilian_FreiherrvonBeust" target="_blank" rel="me">
-                            <div class="col s2 m2" style="background-color:#00605E;">
-                                <img src="https://dl.dropboxusercontent.com/s/2h9ebzhuxhhm6k2/xing.png" class="responsive-img center-align">
-                            </div>
-                            <div class="col s10" style="text-transform:none; color:#000; font-size:15pt; position: absolute; top: 50%; left: 60%;margin-right: -50%;transform: translate(-50%, -50%);">Maximilian Frhr. v. Beust</div>
-                        </a>
-                    </div>
-                </div>
-                <!--END Xing-->
-                <!--START Quora-->
-                <div class="col s12 m6 socialcard">
-                    <div class="card white">
-                        <a href="https://www.quora.com/Max-von-Beust" target="_blank" rel="me">
-                            <div class="col s2 m2" style="background-color:#A82400;">
-                                <img src="https://dl.dropboxusercontent.com/s/5b6kh52rggt1pyr/quora.png" class="responsive-img center-align">
-                            </div>
-                            <div class="col s10" style="text-transform:none; color:#000; font-size:15pt; position: absolute; top: 50%; left: 60%;margin-right: -50%;transform: translate(-50%, -50%);">Max von Beust</div>
-                        </a>
-                    </div>
-                </div>
-                <!--END Quora-->
-                <!--START Github-->
-                <div class="col s12 m6 socialcard">
-                    <div class="card white">
-                        <a href="https://github.com/mvbeust" target="_blank" rel="me">
-                            <div class="col s2 m2" style="background-color:#FFF;">
-                                <img src="https://dl.dropboxusercontent.com/s/vy5z2xcyk4mf8p6/github.png" class="responsive-img center-align">
-                            </div>
-                            <div class="col s10" style="text-transform:none; color:#000; font-size:15pt; position: absolute; top: 50%; left: 60%;margin-right: -50%;transform: translate(-50%, -50%);">Max von Beust</div>
-                        </a>
-                    </div>
-                </div>
-                <!--END Github-->
-                <!--START IFTTT-->
-                <div class="col s12 m6 socialcard">
-                    <div class="card white">
-                        <a href="https://ifttt.com/p/maxvb" target="_blank" rel="me">
-                            <div class="col s2 m2" style="background-color:#FFF;">
-                                <img src="https://dl.dropboxusercontent.com/s/vfneodsjlxiz5mb/ifttt.png" class="responsive-img center-align">
-                            </div>
-                            <div class="col s10" style="text-transform:none; color:#000; font-size:15pt; position: absolute; top: 50%; left: 60%;margin-right: -50%;transform: translate(-50%, -50%);">maxvb</div>
-                        </a>
-                    </div>
-                </div>
-                <!--END IFTTT-->
+          </a>
+          <div class="col s12 center-align" style="border-top-color:#e0e0e0; border-top-width:1px; border-top-style:solid; height:370px">
+            <a class="twitter-timeline" href="https://twitter.com/mvbeust" data-widget-id="648099628932550656" data-chrome="noheader noborders noscrollbar nofooter transparent">Tweets by @mvbeust</a>
+            <script>
+              ! function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                  p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                  js = d.createElement(s);
+                  js.id = id;
+                  js.src = p + "://platform.twitter.com/widgets.js";
+                  fjs.parentNode.insertBefore(js, fjs);
+                }
+              }(document, "script", "twitter-wjs");
+            </script>
+          </div>
+        </div>
+      </div>
+      <!--END Twitter-->
+      <!--START LinkedIn-->
+      <div class="col s12 m6 socialcard">
+        <div class="card white">
+          <a href="https://de.linkedin.com/in/maxvonbeust" target="_blank" rel="me">
+            <div class="col s2 m2" style="background-color:#0077B5;">
+              <img src="https://dl.dropboxusercontent.com/s/fybzd5sbqh34ntu/linkedin.png" class="responsive-img center-align">
             </div>
-            <!--END Social Media-->
-            <!--START Contact-->
-            <div class="row container" id="contact" style="padding-top: 1rem">
-                <div class="col s12 m12">
-                    <div class="card" style="background-color: #FFF">
-                        <div class="card-content"> <span class="badge"><i class="material-icons small" style="color: #1976D2; line-height: inherit">create</span>
+            <div class="col s10" style="text-transform:none; color:#000; font-size:15pt; position: absolute; top: 50%; left: 60%;margin-right: -50%;transform: translate(-50%, -50%);">Maximilian Frhr. v. Beust</div>
+          </a>
+        </div>
+      </div>
+      <!--END LinkedIn-->
+      <!--START Xing-->
+      <div class="col s12 m6 socialcard">
+        <div class="card white">
+          <a href="https://www.xing.com/profile/Maximilian_FreiherrvonBeust" target="_blank" rel="me">
+            <div class="col s2 m2" style="background-color:#00605E;">
+              <img src="https://dl.dropboxusercontent.com/s/2h9ebzhuxhhm6k2/xing.png" class="responsive-img center-align">
+            </div>
+            <div class="col s10" style="text-transform:none; color:#000; font-size:15pt; position: absolute; top: 50%; left: 60%;margin-right: -50%;transform: translate(-50%, -50%);">Maximilian Frhr. v. Beust</div>
+          </a>
+        </div>
+      </div>
+      <!--END Xing-->
+      <!--START Quora-->
+      <div class="col s12 m6 socialcard">
+        <div class="card white">
+          <a href="https://www.quora.com/Max-von-Beust" target="_blank" rel="me">
+            <div class="col s2 m2" style="background-color:#A82400;">
+              <img src="https://dl.dropboxusercontent.com/s/5b6kh52rggt1pyr/quora.png" class="responsive-img center-align">
+            </div>
+            <div class="col s10" style="text-transform:none; color:#000; font-size:15pt; position: absolute; top: 50%; left: 60%;margin-right: -50%;transform: translate(-50%, -50%);">Max von Beust</div>
+          </a>
+        </div>
+      </div>
+      <!--END Quora-->
+      <!--START Github-->
+      <div class="col s12 m6 socialcard">
+        <div class="card white">
+          <a href="https://github.com/mvbeust" target="_blank" rel="me">
+            <div class="col s2 m2" style="background-color:#FFF;">
+              <img src="https://dl.dropboxusercontent.com/s/vy5z2xcyk4mf8p6/github.png" class="responsive-img center-align">
+            </div>
+            <div class="col s10" style="text-transform:none; color:#000; font-size:15pt; position: absolute; top: 50%; left: 60%;margin-right: -50%;transform: translate(-50%, -50%);">Max von Beust</div>
+          </a>
+        </div>
+      </div>
+      <!--END Github-->
+      <!--START IFTTT-->
+      <div class="col s12 m6 socialcard">
+        <div class="card white">
+          <a href="https://ifttt.com/p/maxvb" target="_blank" rel="me">
+            <div class="col s2 m2" style="background-color:#FFF;">
+              <img src="https://dl.dropboxusercontent.com/s/vfneodsjlxiz5mb/ifttt.png" class="responsive-img center-align">
+            </div>
+            <div class="col s10" style="text-transform:none; color:#000; font-size:15pt; position: absolute; top: 50%; left: 60%;margin-right: -50%;transform: translate(-50%, -50%);">maxvb</div>
+          </a>
+        </div>
+      </div>
+      <!--END IFTTT-->
+    </div>
+    <!--END Social Media-->
+    <!--START Contact-->
+    <div class="row container" id="contact" style="padding-top: 1rem">
+      <div class="col s12 m12">
+        <div class="card" style="background-color: #FFF">
+          <div class="card-content">
+            <span class="badge"><i class="material-icons small" style="color: #1976D2; line-height: inherit">create</span>
 
                             </i> <i style="font-style:normal; font-size:20pt; text-align:left; color:#1976D2">Contact Form</i>
 
-                        </div>
-                    </div>
+          </div>
+        </div>
+      </div>
+      <!--START Form-->
+      <div class="col s12 m12">
+        <div class="card white">
+          <div class="card-content">
+            <div class="row">
+              <form class="col s12" id="foo">
+                <div class="row">
+                  <div class="input-field col s6">
+                    <input id="firstname" type="text" class="validate" name="firstname" required>
+                    <label for="first_name">Vorname</label>
+                  </div>
+                  <div class="input-field col s6">
+                    <input id="lastname" type="text" class="validate" name="lastname">
+                    <label for="lastname">Nachname</label>
+                  </div>
                 </div>
-                <!--START Form-->
-                <div class="col s12 m12">
-                    <div class="card white">
-                        <div class="card-content">
-                            <div class="row">
-                                <form class="col s12" id="foo">
-                                    <div class="row">
-                                        <div class="input-field col s6">
-                                            <input id="firstname" type="text" class="validate" name="firstname" required>
-                                            <label for="first_name">Vorname</label>
-                                        </div>
-                                        <div class="input-field col s6">
-                                            <input id="lastname" type="text" class="validate" name="lastname">
-                                            <label for="lastname">Nachname</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input id="email" type="email" class="validate" name="email" required>
-                                            <label for="email">eMail</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <textarea id="textarea1" class="materialize-textarea" name="textarea1"></textarea>
-                                            <label for="textarea1">Deine Nachricht</label>
-                                        </div>
-                                    </div>
-                                    <button class="btn waves-effect waves-light" type="submit" value="Send" style="background-color:#1976D2; margin-top: 12px; margin-left: 3px;" id="result">Senden <i class="material-icons right">send</i>
-
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="email" type="email" class="validate" name="email" required>
+                    <label for="email">eMail</label>
+                  </div>
                 </div>
-                <!--END Form-->
+                <div class="row">
+                  <div class="input-field col s12">
+                    <textarea id="textarea1" class="materialize-textarea" name="textarea1"></textarea>
+                    <label for="textarea1">Deine Nachricht</label>
+                  </div>
+                </div>
+                <button class="btn waves-effect waves-light" type="submit" value="Send" style="background-color:#1976D2; margin-top: 12px; margin-left: 3px;" id="result">Senden <i class="material-icons right">send</i>
+
+                </button>
+              </form>
             </div>
-            <!--END Contact-->
-            <div class="fixed-action-btn" style="bottom: 24px; right: 24px;">
-                <a class="btn-floating btn-large hide-on-small-and-down waves-effect waves-light" href="#menu" style="background-color:#1976D2"> <i class="large material-icons">view_module</i>
+          </div>
+        </div>
+      </div>
+      <!--END Form-->
+    </div>
+    <!--END Contact-->
+    <div class="fixed-action-btn" style="bottom: 24px; right: 24px;">
+      <a class="btn-floating btn-large hide-on-small-and-down waves-effect waves-light" href="#menu" style="background-color:#1976D2"> <i class="large material-icons">view_module</i>
 
-                </a>
-                <a class="btn-floating btn-large hide-on-med-and-up waves-effect waves-light" href="#menumobile" style="background-color:#1976D2"> <i class="large material-icons">view_module</i>
+      </a>
+      <a class="btn-floating btn-large hide-on-med-and-up waves-effect waves-light" href="#menumobile" style="background-color:#1976D2"> <i class="large material-icons">view_module</i>
 
-                </a>
-            </div>
-        </main>
-        <footer class="page-footer" style="margin-top: 0px; padding-top: 0px; background-color:transparent;">
-            <div class="footer-copyright" style="background:#1976D2; border-color:#CCC; border-top:thin; border-top-style:solid; margin-top: 1.5rem;">
-                <div class="container">&#169; 2015</div>
-            </div>
-        </footer>
-        <!--Scripts-->
-        <script type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
-        <script type="text/javascript" src="/js/materialize.min.js"></script>
-        <script type="text/javascript" src="/js/stay_standalone.js"></script>
-        <script>
-            $(document).ready(function(){
-              $('.parallax').parallax();
-            });
-        </script>
-        <script src="/js/masonry.pkgd.min.js"></script>
-        <script>
-            //navblock höhe anpassen
-            (function( $ ) {
-              $.fn.keepRatio = function(which) {
-                  var $this = $(this);
-                  $(window).resize(function() {
-                      switch(which) {
-                          case 'width':
-                              var nh = $this.width();
-                              var nhfont = nh * 0.75;
-                              $this.css('height', nh + 'px');
-                              $this.css('font-size', nhfont + 'px');
-                              break;
-                      }
-                  });
-                  $(document).ready(function() {
-                      switch(which) {
-                          case 'width':
-                              var nh = $this.width();
-                              var nhfont = nh * 0.75;
-                              $this.css('height', nh + 'px');
-                              $this.css('font-size', nhfont + 'px');
-                              break;
-                      }
-                  });
+      </a>
+    </div>
+  </main>
+  <footer class="page-footer" style="margin-top: 0px; padding-top: 0px; background-color:transparent;">
+    <div class="footer-copyright" style="background:#1976D2; border-color:#CCC; border-top:thin; border-top-style:solid; margin-top: 1.5rem;">
+      <div class="container">&#169; 2015</div>
+    </div>
+  </footer>
+  <!--Scripts-->
+  <script type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="/js/materialize.min.js"></script>
+  <script type="text/javascript" src="/js/stay_standalone.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.parallax').parallax();
+    });
+  </script>
+  <script src="/js/masonry.pkgd.min.js"></script>
+  <script>
+    //navblock höhe anpassen
+    (function($) {
+      $.fn.keepRatio = function(which) {
+        var $this = $(this);
+        $(window).resize(function() {
+          switch (which) {
+            case 'width':
+              var nh = $this.width();
+              var nhfont = nh * 0.75;
+              $this.css('height', nh + 'px');
+              $this.css('font-size', nhfont + 'px');
+              break;
+          }
+        });
+        $(document).ready(function() {
+          switch (which) {
+            case 'width':
+              var nh = $this.width();
+              var nhfont = nh * 0.75;
+              $this.css('height', nh + 'px');
+              $this.css('font-size', nhfont + 'px');
+              break;
+          }
+        });
 
-              }
-            })( jQuery );
+      }
+    })(jQuery);
 
-            $(document).ready(function(){
-                $('#navblockedu').keepRatio('width');
-                $('#navblockbus').keepRatio('width');
-                $('#navblockadd').keepRatio('width');
-                $('#navblocksoc').keepRatio('width');
-                $('#navblockplu').keepRatio('width');
-                $('#navblocktwi').keepRatio('width');
-                $('#navblocklkd').keepRatio('width');
-                $('#navblockxin').keepRatio('width');
-                $('#navblockmes').keepRatio('width');
-            });
-            //navblock höhe anpassen 50%
-            (function( $ ) {
-              $.fn.keepRatio50 = function(which) {
-                  var $this = $(this);
-                  $(window).resize(function() {
-                      switch(which) {
-                          case 'width':
-                              var nh = $this.width();
-                              var nh = nh/2;
-                              var nhfont = nh * 0.4;
-                              $this.css('height', nh + 'px');
-                              $this.css('font-size', nhfont + 'px');
-                              break;
-                      }
-                  });
-                  $(document).ready(function() {
-                      switch(which) {
-                          case 'width':
-                              var nh = $this.width();
-                              var nh = nh/2;
-                              var nhfont = nh * 0.4;
-                              $this.css('height', nh + 'px');
-                              $this.css('font-size', nhfont + 'px');
-                              break;
-                      }
-                  });
-              }
-            })( jQuery );
+    $(document).ready(function() {
+      $('#navblockedu').keepRatio('width');
+      $('#navblockbus').keepRatio('width');
+      $('#navblockadd').keepRatio('width');
+      $('#navblocksoc').keepRatio('width');
+      $('#navblockplu').keepRatio('width');
+      $('#navblocktwi').keepRatio('width');
+      $('#navblocklkd').keepRatio('width');
+      $('#navblockxin').keepRatio('width');
+      $('#navblockmes').keepRatio('width');
+    });
+    //navblock höhe anpassen 50%
+    (function($) {
+      $.fn.keepRatio50 = function(which) {
+        var $this = $(this);
+        $(window).resize(function() {
+          switch (which) {
+            case 'width':
+              var nh = $this.width();
+              var nh = nh / 2;
+              var nhfont = nh * 0.4;
+              $this.css('height', nh + 'px');
+              $this.css('font-size', nhfont + 'px');
+              break;
+          }
+        });
+        $(document).ready(function() {
+          switch (which) {
+            case 'width':
+              var nh = $this.width();
+              var nh = nh / 2;
+              var nhfont = nh * 0.4;
+              $this.css('height', nh + 'px');
+              $this.css('font-size', nhfont + 'px');
+              break;
+          }
+        });
+      }
+    })(jQuery);
 
-            $(document).ready(function(){
-                $('#navblock50').keepRatio50('width');
-            });
-            //navblock höhe anpassen 50%
-            (function( $ ) {
-              $.fn.twitterposition = function(which) {
-                  var $this = $(this);
-                  $(window).resize(function() {
-                      switch(which) {
-                          case 'width':
-                              var nh = $this.width();
-                              var nh = nh;
-                              $('#twitterposition').css('height', nh + 'px');
-                              $('#twitterposition').css('height', nh + 'px')
-                              break;
-                      }
-                  });
-                  $(document).ready(function() {
-                      switch(which) {
-                          case 'width':
-                          var nh = $this.width();
-                          var nh = nh;
-                          $('#twitterposition').css('height', nh + 'px');
-                          $('#twitterposition').css('height', nh + 'px')
-                          break;
-                      }
-                  });
-              }
-            })( jQuery );
+    $(document).ready(function() {
+      $('#navblock50').keepRatio50('width');
+    });
+    //navblock höhe anpassen 50%
+    (function($) {
+      $.fn.twitterposition = function(which) {
+        var $this = $(this);
+        $(window).resize(function() {
+          switch (which) {
+            case 'width':
+              var nh = $this.width();
+              var nh = nh;
+              $('#twitterposition').css('height', nh + 'px');
+              $('#twitterposition').css('height', nh + 'px')
+              break;
+          }
+        });
+        $(document).ready(function() {
+          switch (which) {
+            case 'width':
+              var nh = $this.width();
+              var nh = nh;
+              $('#twitterposition').css('height', nh + 'px');
+              $('#twitterposition').css('height', nh + 'px')
+              break;
+          }
+        });
+      }
+    })(jQuery);
 
-            $(document).ready(function(){
-                $('#twitterlogoposition').twitterposition('width');
-            });
-            //masonry start
-            var $container = $('#education');
-                $container.masonry({
-                  columnWidth: '.m6',
-                  itemSelector: '.col',
-                });
-            var $container = $('#business');
-            $container.masonry({
-              columnWidth: '.m6',
-              itemSelector: '.col',
-            });
-            var $container = $('#additional');
-            $container.masonry({
-              columnWidth: '.m6',
-              itemSelector: '.col',
-            });
-            var $container = $('#socialmedia');
-            $container.imagesLoaded( function() {
-                $container.masonry({
-                    columnWidth: '.m6',
-                    itemSelector: '.socialcard',
-                });
-            });
+    $(document).ready(function() {
+      $('#twitterlogoposition').twitterposition('width');
+    });
+    //masonry start
+    var $container = $('#education');
+    $container.masonry({
+      columnWidth: '.m6',
+      itemSelector: '.col',
+    });
+    var $container = $('#business');
+    $container.masonry({
+      columnWidth: '.m6',
+      itemSelector: '.col',
+    });
+    var $container = $('#additional');
+    $container.masonry({
+      columnWidth: '.m6',
+      itemSelector: '.col',
+    });
+    var $container = $('#socialmedia');
+    $container.imagesLoaded(function() {
+      $container.masonry({
+        columnWidth: '.m6',
+        itemSelector: '.socialcard',
+      });
+    });
+  </script>
+  <script type="text/javascript" data-cfasync="false">
+    jQuery(document).ready(function($) {
 
-        </script>
-        <script type="text/javascript" data-cfasync="false">
-            jQuery( document ).ready(function( $ ) {
+      // variable to hold request
+      var request;
+      // bind to the submit event of our form
+      $("#foo").submit(function(event) {
 
-                // variable to hold request
-                var request;
-                // bind to the submit event of our form
-                $("#foo").submit(function(event){
-
-                    // abort any pending request
-                    if (request) {
-                        request.abort();
-                    }
-                    // setup some local variables
-                    var $form = $(this);
-                    $('#result').attr("class", "btn grey white-text inactive");
-                    $('#result').text('Sending...');
-
-
-                    // let's select and cache all the fields
-                    var $inputs = $form.find("button, input, select, button, textarea");
-                    // serialize the data in the form
-                    var serializedData = $form.serialize();
-
-                    // let's disable the inputs for the duration of the ajax request
-                    // Note: we disable elements AFTER the form data has been serialized.
-                    // Disabled form elements will not be serialized.
-                    $inputs.prop("disabled", true);
-
-                    // fire off the request to /form.php
-                    request = $.ajax({
-                        url: "https://script.google.com/macros/s/AKfycbwRHMBiMH5aCHZPA-ueIJBaGZCyXj1V_7fzys6Fmd_kyTR9KGAL/exec",
-                        type: "post",
-                        data: serializedData
-                    });
+        // abort any pending request
+        if (request) {
+          request.abort();
+        }
+        // setup some local variables
+        var $form = $(this);
+        $('#result').attr("class", "btn grey white-text inactive");
+        $('#result').text('Sending...');
 
 
-                    // callback handler that will be called on success
-                    request.done(function (response, textStatus, jqXHR){
-                        // log a message to the console
-                        $('#result').text('Sent');
-                        $('#result').hide();
-                        toast('Message sent', 9000);
-                        console.log("Message has been sent");
-                    });
+        // let's select and cache all the fields
+        var $inputs = $form.find("button, input, select, button, textarea");
+        // serialize the data in the form
+        var serializedData = $form.serialize();
 
-                    // callback handler that will be called on failure
-                    request.fail(function (jqXHR, textStatus, errorThrown){
-                        // log the error to the console
-                        console.error(
-                            "The following error occured: "+
-                            textStatus, errorThrown
-                        );
-                    });
+        // let's disable the inputs for the duration of the ajax request
+        // Note: we disable elements AFTER the form data has been serialized.
+        // Disabled form elements will not be serialized.
+        $inputs.prop("disabled", true);
 
-                    // callback handler that will be called regardless
-                    // if the request failed or succeeded
-                    request.always(function () {
-                        // reenable the inputs
-                        $('#result').text('Sent');
-                        $_POST = array();
-                    });
+        // fire off the request to /form.php
+        request = $.ajax({
+          url: "https://script.google.com/macros/s/AKfycbwRHMBiMH5aCHZPA-ueIJBaGZCyXj1V_7fzys6Fmd_kyTR9KGAL/exec",
+          type: "post",
+          data: serializedData
+        });
 
-                    // prevent default posting of form
-                    event.preventDefault();
-                });
-            });
-        </script>
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-              ga('create', 'UA-68137194-1', 'auto');
-              ga('send', 'pageview');
-        </script>
-    </body>
+        // callback handler that will be called on success
+        request.done(function(response, textStatus, jqXHR) {
+          // log a message to the console
+          $('#result').text('Sent');
+          $('#result').hide();
+          toast('Message sent', 9000);
+          console.log("Message has been sent");
+        });
+
+        // callback handler that will be called on failure
+        request.fail(function(jqXHR, textStatus, errorThrown) {
+          // log the error to the console
+          console.error(
+            "The following error occured: " +
+            textStatus, errorThrown
+          );
+        });
+
+        // callback handler that will be called regardless
+        // if the request failed or succeeded
+        request.always(function() {
+          // reenable the inputs
+          $('#result').text('Sent');
+          $_POST = array();
+        });
+
+        // prevent default posting of form
+        event.preventDefault();
+      });
+    });
+  </script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-68137194-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+
 </html>
