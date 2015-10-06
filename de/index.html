@@ -5,33 +5,20 @@
   <meta charset="utf-8">
   <!--Script for switching to other language-->
   <script>
-    //Enter ISO 639-2 letter Language codes to detect (see: http://www.w3.org/WAI/ER/IG/ert/iso639.htm):
-    var langcodes = new Array("en", "de", "default")
-
-    //Enter corresponding redirect URLs (last one is for default URL):
-    var langredirects = new Array("/", "/de", "/")
-
-    var languageinfo = navigator.language ? navigator.language : navigator.userLanguage
-    var gotodefault = 1
-
-    function redirectpage(dest) {
-      if (window.location.replace)
-        window.location.replace(dest)
-      else
-        window.location = dest
-    }
-    if (languageinfo.substr(0, 2) != 'de') {
-      for (i = 0; i < langcodes.length - 1; i++) {
-        if (languageinfo.substr(0, 2) == langcodes[i]) {
-          redirectpage(langredirects[i])
-          gotodefault = 0
-          break
+    var langcodes = ["en", "de"];
+    var langCode = navigator.language || navigator.systemLanguage;
+    var lang = langCode.toLowerCase();
+    lang = lang.substr(0, 2);
+    var dest = window.location.href;
+    for (i = langcodes.length - 1; i >= 0; i--) {
+      if (lang == langcodes[i]) {
+        if (lang.substr(0, 2) == 'en') {
+          lang = '';
         }
+        dest = 'http://maxvonbeust.com/' + lang.substr(0, 2);
+        window.location.replace ? window.location.replace(dest) : window.location = dest;
       }
     }
-
-    if (gotodefault)
-      redirectpage(langredirects[langcodes.length - 1])
   </script>
   <title>Max von Beust</title>
   <!--External Information-->
