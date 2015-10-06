@@ -20,12 +20,13 @@
       else
         window.location = dest
     }
-
-    for (i = 0; i < langcodes.length - 1; i++) {
-      if (languageinfo.substr(0, 2) == langcodes[i]) {
-        redirectpage(langredirects[i])
-        gotodefault = 0
-        break
+    if (languageinfo.substr(0, 2) != 'de') {
+      for (i = 0; i < langcodes.length - 1; i++) {
+        if (languageinfo.substr(0, 2) == langcodes[i]) {
+          redirectpage(langredirects[i])
+          gotodefault = 0
+          break
+        }
       }
     }
 
