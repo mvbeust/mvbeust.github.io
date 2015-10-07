@@ -804,6 +804,16 @@
   <script type="text/javascript" src="/js/materialize.min.js"></script>
   <script type="text/javascript" src="/js/stay_standalone.js"></script>
   <script>
+    $(function() {
+      var width = $(window).width();
+      if (width >= 590) {
+        $('<img src="/img/parallax_airplane.jpg">').appendTo('.parallax');
+      } else {
+        $('').appendTo('.parallax');
+      }
+    });
+  </script>
+  <script>
     $(document).ready(function() {
       $('.parallax').parallax();
     });
