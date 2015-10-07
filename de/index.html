@@ -49,7 +49,10 @@
   <main>
     <div class="parallax-container hide-on-small-and-down">
       <div class="parallax">
-        <img src="/img/parallax_airplane.jpg">
+        <picture>
+          <source src=/img/parallax_airplane.webp type=image/webp> 
+          <img src=/img/parallax_airplane.jpg alt="Airplane">
+        </picture>
       </div>
     </div>
     <!--START Profile Card-->
@@ -803,16 +806,6 @@
   <script type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="/js/materialize.min.js"></script>
   <script type="text/javascript" src="/js/stay_standalone.js"></script>
-  <script>
-    $(function() {
-      var width = $(window).width();
-      if (width >= 590) {
-        $('<img src="/img/parallax_airplane.jpg">').appendTo('.parallax');
-      } else {
-        $('').appendTo('.parallax');
-      }
-    });
-  </script>
   <script>
     $(document).ready(function() {
       $('.parallax').parallax();
