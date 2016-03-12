@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <title>Max von Beust - Posts</title>
+  <!--External Information-->
+  <meta name="description" content="Posts, Ideas and Travel Reports by Max von Beust. Writing all sorts of stuff about personal and work topics, politics, economics and the world.">
+  <!--Languages-->
+  <link rel=“alternate” hreflang=“en” href=“http://www.maxvonbeust.com/posts” />
+  <link rel=“alternate” hreflang=“de” href=“http://www.maxvonbeust.com/de/posts” />
+  <!--Stylesheets-->
+  <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+  <!--Icons and Logos-->
+  <link rel="icon" href="/img/favicon.png">
+  <!--Mobile Optimizations-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#1976D2">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="MvB">
+  <meta name="msapplication-TileImage" content="/img/logo_new.png">
+  <meta name="msapplication-TileColor" content="#3f51b5">
+  <meta name="msapplication-navbutton-color" content="#3f51b5">
+  <link rel="manifest" href="/manifest.json">
+</head>
+
+<body>
+  <header>
+    <div class="navbar-fixed">
+      <nav class="max-blue">
+        <!--Desktop Navigation-->
+        <div class="hide-on-med-and-down">
+          <div class="nav-wrapper container">
+            <ul class="left">
+              <a class="waves-effect waves-light" style="display:inherit" href="/"> <i class="large material-icons">home</i></a>
+            </ul>
+            <a id="logo-container" class="brand-logo center" href="/"><img width="64" src="/img/favicon.png" alt="Max von Beust" /></a>
+            <ul class="right">
+            </ul>
+          </div>
+        </div>
+        <!--Mobile Navigation-->
+        <div class="hide-on-large-only">
+          <div class="nav-wrapper container">
+            <ul class="left">
+              <a class="waves-effect waves-light" style="display:inherit" href="/"> <i class="large material-icons">home</i></a>
+            </ul>
+            <a id="logo-container" class="brand-logo center" href="/"><img width="56" src="/img/favicon.png" alt="Max von Beust" /></a>
+            <ul class="right">
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="parallax-container">
+      <div class="parallax">
+        <img src="/posts/img/parallax_posts.jpg">
+      </div>
+    </div>
+
+
+
+    <!--START Description-->
+    <div class="section">
+      <div class="row container">
+        <h2 class="header">Under Construction</h2>
+      </div>
+    </div>
+    <!--END Description-->
+
+
+
+
+
+
+    <!--START Contact-->
+    <div class="section">
+      <div class="row container" id="contact" style="padding-top: 5rem">
+        <div class="col s12 m12">
+          <div class="card" style="background-color: #FFF">
+            <div class="card-content">
+              <span class="badge"><i class="material-icons small" style="color: #1976D2; line-height: inherit">create</span>
+
+              </i> <i style="font-style:normal; font-size:20pt; text-align:left; color:#1976D2">Contact Me!</i>
+
+            </div>
+          </div>
+        </div>
+        <!--START Form-->
+        <div class="col s12 m12">
+          <div class="card white">
+            <div class="card-content">
+              <div class="row">
+                <form class="col s12" id="foo">
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input id="firstname" type="text" class="validate" name="firstname" required>
+                      <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <input id="lastname" type="text" class="validate" name="lastname">
+                      <label for="lastname">Last Name</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="email" type="email" class="validate" name="email" required>
+                      <label for="email">eMail</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <textarea id="textarea1" class="materialize-textarea" name="textarea1"></textarea>
+                      <label for="textarea1">Your Message</label>
+                    </div>
+                  </div>
+                  <button class="btn waves-effect waves-light" type="submit" value="Send" style="background-color:#1976D2; margin-top: 12px; margin-left: 3px;" id="result">Send <i class="material-icons right">send</i>
+
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--END Form-->
+      </div>
+    </div>
+    <!--END Contact-->
+  </main>
+
+  <footer class="page-footer" style="margin-top: 0px; padding-top: 0px; background-color:transparent;">
+    <div class="footer-copyright" style="background:#1976D2; border-color:#CCC; border-top:thin; border-top-style:solid; margin-top: 1.5rem;">
+      <div class="container">&#169; 2015</div>
+    </div>
+  </footer>
+  <!--Scripts-->
+  <script type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="/js/materialize.min.js"></script>
+  <script type="text/javascript" src="/js/stay_standalone.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.parallax').parallax();
+    });
+  </script>
+  <script src="/js/masonry.pkgd.min.js"></script>
+  <script>
+    var $container = $('#posts');
+    $container.masonry({
+      columnWidth: '.l6',
+      itemSelector: '.l6',
+    });
+    $container.imagesLoaded(function() {
+      $container.masonry({
+        columnWidth: '.l6',
+        itemSelector: '.postcards',
+      });
+    });
+  </script>
+  <script type="text/javascript" data-cfasync="false">
+    jQuery(document).ready(function($) {
+
+      // variable to hold request
+      var request;
+      // bind to the submit event of our form
+      $("#foo").submit(function(event) {
+
+        // abort any pending request
+        if (request) {
+          request.abort();
+        }
+        // setup some local variables
+        var $form = $(this);
+        $('#result').attr("class", "btn grey white-text inactive");
+        $('#result').text('Sending...');
+
+
+        // let's select and cache all the fields
+        var $inputs = $form.find("button, input, select, button, textarea");
+        // serialize the data in the form
+        var serializedData = $form.serialize();
+
+        // let's disable the inputs for the duration of the ajax request
+        // Note: we disable elements AFTER the form data has been serialized.
+        // Disabled form elements will not be serialized.
+        $inputs.prop("disabled", true);
+
+        // fire off the request to /form.php
+        request = $.ajax({
+          url: "https://script.google.com/macros/s/AKfycbwRHMBiMH5aCHZPA-ueIJBaGZCyXj1V_7fzys6Fmd_kyTR9KGAL/exec",
+          type: "post",
+          data: serializedData
+        });
+
+
+        // callback handler that will be called on success
+        request.done(function(response, textStatus, jqXHR) {
+          // log a message to the console
+          $('#result').text('Sent');
+          $('#result').hide();
+          toast('Message sent', 9000);
+          console.log("Message has been sent");
+        });
+
+        // callback handler that will be called on failure
+        request.fail(function(jqXHR, textStatus, errorThrown) {
+          // log the error to the console
+          console.error(
+            "The following error occured: " +
+            textStatus, errorThrown
+          );
+        });
+
+        // callback handler that will be called regardless
+        // if the request failed or succeeded
+        request.always(function() {
+          // reenable the inputs
+          $('#result').text('Sent');
+          $_POST = array();
+        });
+
+        // prevent default posting of form
+        event.preventDefault();
+      });
+    });
+  </script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-68137194-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+
+</html>

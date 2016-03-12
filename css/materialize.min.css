@@ -7,6 +7,9 @@
 .max-blue {
   background-color: #1976D2;
 }
+.max-blue-text{
+  color: #1976D2;
+}
 .chip {
   display: inline-block;
   height: 32px;
@@ -1922,6 +1925,11 @@ img.responsive-img, video.responsive-video {
   overflow: hidden;
   height: 250px
 }
+.parallax-container-large {
+  position: relative;
+  overflow: hidden;
+  height: 400px
+}
 .parallax {
   position: absolute;
   top: 0;
@@ -2754,7 +2762,9 @@ nav .nav-wrapper {
   height: 100%
 }
 nav .nav-wrapper i {
-  font-size: 2rem
+  font-size: 2rem;
+  height: 58px;
+  line-height: 58px
 }
 @media only screen and (min-width: 993px) {
   nav a.button-collapse {
@@ -2913,7 +2923,8 @@ html {
   }
 }
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 400
+  font-weight: 400;
+  color:#1976D2
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-weight: inherit
@@ -2960,6 +2971,10 @@ small {
 .light, footer.page-footer .footer-copyright {
   font-weight: 300
 }
+.blocksatz {
+  hyphens: auto;
+  text-align: justify
+  }
 .flow-text {
   font-weight: 300
 }
